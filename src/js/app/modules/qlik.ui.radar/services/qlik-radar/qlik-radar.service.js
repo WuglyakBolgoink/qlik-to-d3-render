@@ -2,38 +2,34 @@
 
 const PRECISION = 2;
 
+const SORT_ORDER = {
+    0: 'category',
+    1: 'axis',
+    2: 'value'
+};
+
 class QlikRadarService {
 
     convertData(file) {
         const qDataPages = file.result.qLayout.qHyperCube.qDataPages;
         const ColorSchema = file.result.qLayout.ColorSchema;
+        const qEffectiveInterColumnSortOrder = file.result.qLayout.qHyperCube.qEffectiveInterColumnSortOrder;
 
-        const {
-            showTitles,
-            title,
-            subtitle,
-            footnote,
-            showDetails,
-            strokeStyle,
-            range,
-            maxValue,
-            minValue,
-            showLegend
-        } = file.result.qLayout;
-
-        // Его нужно учитывать при построении диаграммы
-        const globalChartOptions = {
-            showTitles,
-            title,
-            subtitle,
-            footnote,
-            showDetails,
-            strokeStyle,
-            range,
-            maxValue,
-            minValue,
-            showLegend
+        const qlikChartOptions = {
+            showTitles: file.result.qLayout.showTitles,
+            title: file.result.qLayout.title,
+            subtitle: file.result.qLayout.subtitle,
+            footnote: file.result.qLayout.footnote,
+            disableNavMenu: file.result.qLayout.disableNavMenu,
+            showDetails: file.result.qLayout.showDetails,
+            strokeStyle: file.result.qLayout.strokeStyle,
+            range: file.result.qLayout.range,
+            maxValue: file.result.qLayout.maxValue,
+            minValue: file.result.qLayout.minValue,
+            showLegend: file.result.qLayout.showLegend
         };
+
+        console.log('[convertData] qEffectiveInterColumnSortOrder', qEffectiveInterColumnSortOrder);
 
         const qDataPagesFirst = qDataPages.pop();
 
@@ -49,12 +45,12 @@ class QlikRadarService {
             const categories = [];
             data = _.chain(data)
                 .sortBy([
-                    'category'
+                    SORT_ORDER[qEffectiveInterColumnSortOrder[0]],
+                    SORT_ORDER[qEffectiveInterColumnSortOrder[1]],
+                    SORT_ORDER[qEffectiveInterColumnSortOrder[2]]
                 ])
                 .groupBy('category')
                 .reduce((acc, current, key) => {
-                    current = _.sortBy(current, [ 'axis', 'value' ]);
-
                     acc.push({
                         key,
                         values: current
@@ -72,11 +68,21 @@ class QlikRadarService {
                 return Math.max.apply(null, values);
             }
 
+            function getMinValue(data) {
+                const values = data.map(el => el.values).flat().map(el => el.value).sort();
+
+                return Math.min.apply(null, values);
+            }
+
             return {
                 categories,
                 data,
                 colorSchema: ColorSchema,
-                maxValue: getMaxValue(data)
+                maxValue: getMaxValue(data),
+                minValue: getMinValue(data),
+                options: {
+                    ...qlikChartOptions
+                }
             };
         }
     }

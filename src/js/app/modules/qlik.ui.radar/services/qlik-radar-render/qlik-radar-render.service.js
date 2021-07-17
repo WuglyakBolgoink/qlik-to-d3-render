@@ -40,7 +40,8 @@ function RadarChart(id, data, options) {
         strokeWidth: 2, 		//The width of the stroke around each blob
         roundStrokes: false,	//If true the area and stroke will follow a round path (cardinal-closed)
         color: d3.scaleOrdinal(d3.schemeCategory10),	//Color function
-        legendTitle: 'legendTitle',
+        showLegend: false,
+        legendTitle: '',
         legendPosition: {
             x: 20,
             y: 20
@@ -443,47 +444,49 @@ function RadarChart(id, data, options) {
             .style('fill-opacity', cfg.opacityArea);
     } // cellout
 
-    /////////////////////////////////////////////////////////
-    /////////////////// Draw the Legend /////////////////////
-    /////////////////////////////////////////////////////////
+    if (cfg.showLegend) {
+        /////////////////////////////////////////////////////////
+        /////////////////// Draw the Legend /////////////////////
+        /////////////////////////////////////////////////////////
 
-    svg
-        .append('g')
-        .attr('class', 'legendOrdinal')
-        .attr('transform', 'translate(' + cfg['legendPosition']['x'] + ',' + cfg['legendPosition']['y'] + ')');
+        svg
+            .append('g')
+            .attr('class', 'legendOrdinal')
+            .attr('transform', 'translate(' + cfg['legendPosition']['x'] + ',' + cfg['legendPosition']['y'] + ')');
 
-    const legendOrdinal = d3.legendColor()
-        // d3 symbol creates a path-string, for example
-        // "M0,-8.059274488676564L9.306048591020996,8.059274488676564 -9.306048591020996,8.059274488676564Z"
-        .shape('path', d3.symbol().type(d3.symbolTriangle).size(150)())
-        .shapePadding(10)
-        .scale(cfg.color.domain(categories))
-        .title(cfg.legendTitle)
-        .labels(
-            cfg
-                .color
-                .domain()
-                .map(function (d, i) {
-                    try {
-                        return data[i][0][areaName];
-                    } catch (e) {
-                        console.error('[e]', e);
-                    }
+        const legendOrdinal = d3.legendColor()
+            // d3 symbol creates a path-string, for example
+            // "M0,-8.059274488676564L9.306048591020996,8.059274488676564 -9.306048591020996,8.059274488676564Z"
+            .shape('path', d3.symbol().type(d3.symbolTriangle).size(150)())
+            .shapePadding(10)
+            .scale(cfg.color.domain(categories))
+            .title(cfg.legendTitle)
+            .labels(
+                cfg
+                    .color
+                    .domain()
+                    .map(function (d, i) {
+                        try {
+                            return data[i][0][areaName];
+                        } catch (e) {
+                            console.error('[e]', e);
+                        }
 
-                    return 'n/A';
-                })
-        );
+                        return 'n/A';
+                    })
+            );
 
-    legendOrdinal
-        .on('cellover', function (d) {
-            cellover(d);
-        })
-        .on('cellout', function (d) {
-            cellout();
-        });
+        legendOrdinal
+            .on('cellover', function (d) {
+                cellover(d);
+            })
+            .on('cellout', function (d) {
+                cellout();
+            });
 
-    svg.select('.legendOrdinal')
-        .call(legendOrdinal);
+        svg.select('.legendOrdinal')
+            .call(legendOrdinal);
+    }
 
     //Put all of the options into a variable called cfg
     function initConfig(options) {

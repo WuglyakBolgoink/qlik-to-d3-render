@@ -5,6 +5,7 @@
  *
  * @property {string} cmpClass - CSS class name.
  * @property {any} cmpData - Converted qlik data.
+ * @property {boolean} cmpRoundStrokes - If true the area and stroke will follow a round path (cardinal-closed)
  */
 class QlikRadarChartController {
 
@@ -40,11 +41,11 @@ class QlikRadarChartController {
             margin: margin,
             maxValue: this.cmpData.maxValue,
             levels: 6,
-            roundStrokes: true,
+            roundStrokes: this.cmpRoundStrokes || false,
             color: d3.scaleOrdinal().range([ ...this.cmpData.colorSchema ]),
-            //extras
             colorSchema: this.cmpData.colorSchema,
-            legendTitle: this.cmpTitle,
+            showLegend: this.cmpData.options.showLegend,
+            legendTitle: this.cmpData.options.showLegend || '',
             legendPosition: legendPosition,
             axisName: 'axis',
             areaName: 'category',
@@ -74,7 +75,8 @@ angular
         template: '<div class="rc" data-ng-class="$ctrl.cmpClass"></div>',
         bindings: {
             cmpClass: '@',
-            cmpData: '<'
+            cmpData: '<',
+            cmpRoundStrokes: '<'
         },
         controller: QlikRadarChartController
     });
