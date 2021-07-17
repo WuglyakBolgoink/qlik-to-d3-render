@@ -1,0 +1,6252 @@
+{
+  "jsonrpc": "2.0",
+  "id": 6,
+  "delta": true,
+  "result": {
+    "qLayout": {
+      "qInfo": {
+        "qId": "2eafb265-1c81-4ba4-bbcd-b15acab36d76",
+        "qType": "qlik-radar-chart"
+      },
+      "qMeta": {
+        "privileges": [
+          "read",
+          "update",
+          "delete",
+          "exportdata"
+        ]
+      },
+      "qSelectionInfo": {},
+      "qHyperCube": {
+        "qSize": {
+          "qcx": 3,
+          "qcy": 300
+        },
+        "qDimensionInfo": [
+          {
+            "qFallbackTitle": "Жанр",
+            "qApprMaxGlyphCount": 48,
+            "qCardinal": 208,
+            "qSortIndicator": "A",
+            "qGroupFallbackTitles": [
+              "Жанр"
+            ],
+            "qGroupPos": 0,
+            "qStateCounts": {
+              "qLocked": 0,
+              "qSelected": 0,
+              "qOption": 208,
+              "qDeselected": 0,
+              "qAlternative": 0,
+              "qExcluded": 0,
+              "qSelectedExcluded": 0,
+              "qLockedExcluded": 0
+            },
+            "qTags": [
+              "$ascii",
+              "$text"
+            ],
+            "qDimensionType": "D",
+            "qGrouping": "N",
+            "qNumFormat": {
+              "qType": "U",
+              "qnDec": 0,
+              "qUseThou": 0
+            },
+            "qIsAutoFormat": true,
+            "qGroupFieldDefs": [
+              "Жанр"
+            ],
+            "qMin": "NaN",
+            "qMax": "NaN",
+            "qAttrExprInfo": [],
+            "qAttrDimInfo": [],
+            "qCardinalities": {
+              "qCardinal": 208,
+              "qHypercubeCardinal": 208,
+              "qAllValuesCardinal": -1
+            },
+            "autoSort": true,
+            "cId": "hZsTPmw",
+            "othersLabel": "Others"
+          },
+          {
+            "qFallbackTitle": "Десятилетие",
+            "qApprMaxGlyphCount": 2,
+            "qCardinal": 8,
+            "qSortIndicator": "A",
+            "qGroupFallbackTitles": [
+              "Десятилетие"
+            ],
+            "qGroupPos": 0,
+            "qStateCounts": {
+              "qLocked": 0,
+              "qSelected": 0,
+              "qOption": 8,
+              "qDeselected": 0,
+              "qAlternative": 0,
+              "qExcluded": 0,
+              "qSelectedExcluded": 0,
+              "qLockedExcluded": 0
+            },
+            "qTags": [
+              "$numeric",
+              "$integer"
+            ],
+            "qDimensionType": "N",
+            "qGrouping": "N",
+            "qNumFormat": {
+              "qType": "R",
+              "qnDec": 0,
+              "qUseThou": 0,
+              "qFmt": "##############",
+              "qDec": ",",
+              "qThou": " "
+            },
+            "qIsAutoFormat": true,
+            "qGroupFieldDefs": [
+              "Десятилетие"
+            ],
+            "qMin": 0,
+            "qMax": 90,
+            "qContinuousAxes": true,
+            "qAttrExprInfo": [],
+            "qAttrDimInfo": [],
+            "qCardinalities": {
+              "qCardinal": 8,
+              "qHypercubeCardinal": 8,
+              "qAllValuesCardinal": -1
+            },
+            "autoSort": true,
+            "cId": "mkWKnFn",
+            "othersLabel": "Others"
+          }
+        ],
+        "qMeasureInfo": [
+          {
+            "qFallbackTitle": "Avg([Длительность])",
+            "qApprMaxGlyphCount": 3,
+            "qCardinal": 0,
+            "qSortIndicator": "D",
+            "qNumFormat": {
+              "qType": "R",
+              "qnDec": 0,
+              "qUseThou": 0,
+              "qFmt": "########",
+              "qDec": ",",
+              "qThou": " "
+            },
+            "qMin": 79,
+            "qMax": 207,
+            "qIsAutoFormat": true,
+            "qAttrExprInfo": [],
+            "qAttrDimInfo": [],
+            "qTrendLines": [],
+            "autoSort": true,
+            "cId": "WWjeweu",
+            "numFormatFromTemplate": true
+          }
+        ],
+        "qEffectiveInterColumnSortOrder": [
+          0,
+          1,
+          2
+        ],
+        "qGrandTotalRow": [
+          {
+            "qText": "116,14679",
+            "qNum": 116.14678899082568,
+            "qElemNumber": -1,
+            "qState": "X",
+            "qIsTotalCell": true
+          }
+        ],
+        "qDataPages": [
+          {
+            "qMatrix": [
+              [
+                {
+                  "qText": "Action|Adventure",
+                  "qNum": "NaN",
+                  "qElemNumber": 118,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "122",
+                  "qNum": 122,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure",
+                  "qNum": "NaN",
+                  "qElemNumber": 118,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "110",
+                  "qNum": 110,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure",
+                  "qNum": "NaN",
+                  "qElemNumber": 118,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116,25",
+                  "qNum": 116.25,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Biography",
+                  "qNum": "NaN",
+                  "qElemNumber": 18,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "175",
+                  "qNum": 175,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Biography",
+                  "qNum": "NaN",
+                  "qElemNumber": 18,
+                  "qState": "O"
+                },
+                {
+                  "qText": "50",
+                  "qNum": 50,
+                  "qElemNumber": 6,
+                  "qState": "O"
+                },
+                {
+                  "qText": "93",
+                  "qNum": 93,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 185,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "95",
+                  "qNum": 95,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Crime",
+                  "qNum": "NaN",
+                  "qElemNumber": 60,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106",
+                  "qNum": 106,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Family|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 130,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "130",
+                  "qNum": 130,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 43,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "99",
+                  "qNum": 99,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Music",
+                  "qNum": "NaN",
+                  "qElemNumber": 172,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "98",
+                  "qNum": 98,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Music",
+                  "qNum": "NaN",
+                  "qElemNumber": 172,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Romance|Thriller|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 187,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "136",
+                  "qNum": 136,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 191,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Thriller|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 159,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "124",
+                  "qNum": 124,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|Thriller|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 136,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "127",
+                  "qNum": 127,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Comedy|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 123,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "144",
+                  "qNum": 144,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Crime",
+                  "qNum": "NaN",
+                  "qElemNumber": 197,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "119",
+                  "qNum": 119,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 40,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "140",
+                  "qNum": 140,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Crime|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 178,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "130",
+                  "qNum": 130,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Crime|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 145,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "142",
+                  "qNum": 142,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 83,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "118",
+                  "qNum": 118,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 83,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "122,75",
+                  "qNum": 122.75,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 83,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "129",
+                  "qNum": 129,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 83,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115,66667",
+                  "qNum": 115.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 16,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "119,66667",
+                  "qNum": 119.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 16,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "122",
+                  "qNum": 122,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 16,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "131,5",
+                  "qNum": 131.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 16,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "110",
+                  "qNum": 110,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama|History|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 175,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "131",
+                  "qNum": 131,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama|History|Romance|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 183,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "112",
+                  "qNum": 112,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama|History|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 127,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "144",
+                  "qNum": 144,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama|Romance",
+                  "qNum": "NaN",
+                  "qElemNumber": 126,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "187",
+                  "qNum": 187,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 29,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "139",
+                  "qNum": 139,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Drama|Thriller|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 141,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "101",
+                  "qNum": 101,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Family",
+                  "qNum": "NaN",
+                  "qElemNumber": 174,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "150",
+                  "qNum": 150,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 131,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "154,66667",
+                  "qNum": 154.66666666666666,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 131,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "89",
+                  "qNum": 89,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 131,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "113,5",
+                  "qNum": 113.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 50,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "95",
+                  "qNum": 95,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Horror|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 47,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "113",
+                  "qNum": 113,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 112,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "139,5",
+                  "qNum": 139.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 112,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "121",
+                  "qNum": 121,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 112,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "134",
+                  "qNum": 134,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 112,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "136",
+                  "qNum": 136,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 121,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96,5",
+                  "qNum": 96.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 121,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "101",
+                  "qNum": 101,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Fantasy|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 192,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "92",
+                  "qNum": 92,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 56,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "142",
+                  "qNum": 142,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 87,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "105,5",
+                  "qNum": 105.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 87,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "108",
+                  "qNum": 108,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Horror|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 150,
+                  "qState": "O"
+                },
+                {
+                  "qText": "50",
+                  "qNum": 50,
+                  "qElemNumber": 6,
+                  "qState": "O"
+                },
+                {
+                  "qText": "79",
+                  "qNum": 79,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Mystery",
+                  "qNum": "NaN",
+                  "qElemNumber": 73,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "109",
+                  "qNum": 109,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Romance|Sport",
+                  "qNum": "NaN",
+                  "qElemNumber": 25,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "95",
+                  "qNum": 95,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 21,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "121,42857",
+                  "qNum": 121.42857142857143,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 21,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "132,66667",
+                  "qNum": 132.66666666666666,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 21,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "123,66667",
+                  "qNum": 123.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 32,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115,6",
+                  "qNum": 115.6,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 32,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "107",
+                  "qNum": 107,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 32,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "151",
+                  "qNum": 151,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 55,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "124,5",
+                  "qNum": 124.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 55,
+                  "qState": "O"
+                },
+                {
+                  "qText": "10",
+                  "qNum": 10,
+                  "qElemNumber": 5,
+                  "qState": "O"
+                },
+                {
+                  "qText": "103",
+                  "qNum": 103,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 55,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "88",
+                  "qNum": 88,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 55,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "101,33333",
+                  "qNum": 101.33333333333333,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 55,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "117,8",
+                  "qNum": 117.8,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Thriller|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 81,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "111",
+                  "qNum": 111,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 206,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "158",
+                  "qNum": 158,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Adventure|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 186,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "129",
+                  "qNum": 129,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Biography|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 85,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "127",
+                  "qNum": 127,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Biography|Drama|History|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 52,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "177",
+                  "qNum": 177,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Biography|Drama|Sport",
+                  "qNum": "NaN",
+                  "qElemNumber": 97,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 44,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "102,5",
+                  "qNum": 102.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 44,
+                  "qState": "O"
+                },
+                {
+                  "qText": "10",
+                  "qNum": 10,
+                  "qElemNumber": 5,
+                  "qState": "O"
+                },
+                {
+                  "qText": "117",
+                  "qNum": 117,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 44,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "103",
+                  "qNum": 103,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime",
+                  "qNum": "NaN",
+                  "qElemNumber": 36,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "102,66667",
+                  "qNum": 102.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime",
+                  "qNum": "NaN",
+                  "qElemNumber": 36,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "103",
+                  "qNum": 103,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 37,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "101",
+                  "qNum": 101,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 37,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "118",
+                  "qNum": 118,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 129,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "99",
+                  "qNum": 99,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime|Mystery",
+                  "qNum": "NaN",
+                  "qElemNumber": 128,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "103",
+                  "qNum": 103,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 181,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "105",
+                  "qNum": 105,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 14,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "108,66667",
+                  "qNum": 108.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 14,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "100",
+                  "qNum": 100,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 14,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "85",
+                  "qNum": 85,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 58,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 184,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "100",
+                  "qNum": 100,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 120,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "85",
+                  "qNum": 85,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Romance",
+                  "qNum": "NaN",
+                  "qElemNumber": 143,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "120",
+                  "qNum": 120,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 203,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "107",
+                  "qNum": 107,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Comedy|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 115,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "85",
+                  "qNum": 85,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime",
+                  "qNum": "NaN",
+                  "qElemNumber": 125,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "98,5",
+                  "qNum": 98.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 79,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "111,25",
+                  "qNum": 111.25,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 79,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96,75",
+                  "qNum": 96.75,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 79,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96,5",
+                  "qNum": 96.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 101,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "108,25",
+                  "qNum": 108.25,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 101,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115,5",
+                  "qNum": 115.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 6,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "110,5",
+                  "qNum": 110.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 6,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "123",
+                  "qNum": 123,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 6,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "99,666667",
+                  "qNum": 99.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 6,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "113",
+                  "qNum": 113,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 102,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "108",
+                  "qNum": 108,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Mystery|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 74,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "135",
+                  "qNum": 135,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 158,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "102",
+                  "qNum": 102,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 82,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "126,5",
+                  "qNum": 126.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 33,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "103,11765",
+                  "qNum": 103.11764705882354,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 33,
+                  "qState": "O"
+                },
+                {
+                  "qText": "10",
+                  "qNum": 10,
+                  "qElemNumber": 5,
+                  "qState": "O"
+                },
+                {
+                  "qText": "105",
+                  "qNum": 105,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 33,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "97,5",
+                  "qNum": 97.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 33,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "109",
+                  "qNum": 109,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 33,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116",
+                  "qNum": 116,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 132,
+                  "qState": "O"
+                },
+                {
+                  "qText": "50",
+                  "qNum": 50,
+                  "qElemNumber": 6,
+                  "qState": "O"
+                },
+                {
+                  "qText": "207",
+                  "qNum": 207,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 132,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "119",
+                  "qNum": 119,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 132,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "86",
+                  "qNum": 86,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 132,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "107",
+                  "qNum": 107,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Adventure|Romance",
+                  "qNum": "NaN",
+                  "qElemNumber": 188,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Comedy|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 204,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "94",
+                  "qNum": 94,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 34,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "109",
+                  "qNum": 109,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 34,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96",
+                  "qNum": 96,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 93,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "140",
+                  "qNum": 140,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Fantasy|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 133,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "83",
+                  "qNum": 83,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 105,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "99",
+                  "qNum": 99,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 105,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "123",
+                  "qNum": 123,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 105,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "110",
+                  "qNum": 110,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|History|Romance|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 196,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "130",
+                  "qNum": 130,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|History|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 182,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "146",
+                  "qNum": 146,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Mystery",
+                  "qNum": "NaN",
+                  "qElemNumber": 205,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "162",
+                  "qNum": 162,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 92,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115",
+                  "qNum": 115,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Romance",
+                  "qNum": "NaN",
+                  "qElemNumber": 77,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "120",
+                  "qNum": 120,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Romance|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 149,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "183",
+                  "qNum": 183,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 164,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "100,5",
+                  "qNum": 100.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 91,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "107",
+                  "qNum": 107,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 67,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "114,5",
+                  "qNum": 114.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 67,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "89",
+                  "qNum": 89,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 67,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115",
+                  "qNum": 115,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 76,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "142,75",
+                  "qNum": 142.75,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 76,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "119",
+                  "qNum": 119,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 76,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "131,66667",
+                  "qNum": 131.66666666666666,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 76,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "169",
+                  "qNum": 169,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Drama|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 124,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "105",
+                  "qNum": 105,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 41,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "114",
+                  "qNum": 114,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Fantasy|Adventure",
+                  "qNum": "NaN",
+                  "qElemNumber": 71,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "129",
+                  "qNum": 129,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Fantasy|History|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "117",
+                  "qNum": 117,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Fantasy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 45,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "120",
+                  "qNum": 120,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Fantasy|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 95,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "99",
+                  "qNum": 99,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Fantasy|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 107,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "117,5",
+                  "qNum": 117.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 78,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "105",
+                  "qNum": 105,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 78,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "127",
+                  "qNum": 127,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Horror|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 66,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "99",
+                  "qNum": 99,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Horror|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 22,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "100",
+                  "qNum": 100,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Horror|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 108,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "140,5",
+                  "qNum": 140.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Mystery|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 117,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115",
+                  "qNum": 115,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Mystery|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 140,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "145",
+                  "qNum": 145,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 173,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "119",
+                  "qNum": 119,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Romance|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 54,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "92",
+                  "qNum": 92,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 15,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "105,33333",
+                  "qNum": 105.33333333333333,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 15,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "103",
+                  "qNum": 103,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 15,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "137",
+                  "qNum": 137,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 68,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "101,28571",
+                  "qNum": 101.28571428571429,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 68,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96",
+                  "qNum": 96,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 68,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "137",
+                  "qNum": 137,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 39,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106,66667",
+                  "qNum": 106.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 39,
+                  "qState": "O"
+                },
+                {
+                  "qText": "10",
+                  "qNum": 10,
+                  "qElemNumber": 5,
+                  "qState": "O"
+                },
+                {
+                  "qText": "119",
+                  "qNum": 119,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 39,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "89",
+                  "qNum": 89,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 39,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "113,66667",
+                  "qNum": 113.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 39,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106",
+                  "qNum": 106,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Thriller|Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 146,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "91",
+                  "qNum": 91,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Thriller|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 154,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "92",
+                  "qNum": 92,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 155,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96",
+                  "qNum": 96,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|War|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 42,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106",
+                  "qNum": 106,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Action|Western|Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 207,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106",
+                  "qNum": 106,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Biography|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 89,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "199",
+                  "qNum": 199,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Biography|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 89,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "148",
+                  "qNum": 148,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 96,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "118",
+                  "qNum": 118,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Comedy|Family|Fantasy|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 169,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Comedy|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 142,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "91",
+                  "qNum": 91,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Comedy|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 100,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "112",
+                  "qNum": 112,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Comedy|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 104,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "102",
+                  "qNum": 102,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Comedy|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 199,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116",
+                  "qNum": 116,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Crime|Drama|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "122",
+                  "qNum": 122,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 152,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "163",
+                  "qNum": 163,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 152,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "103",
+                  "qNum": 103,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Drama|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 61,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "109",
+                  "qNum": 109,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 48,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "143",
+                  "qNum": 143,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 119,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "153",
+                  "qNum": 153,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Family|Fantasy",
+                  "qNum": "NaN",
+                  "qElemNumber": 64,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "143",
+                  "qNum": 143,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Family|Fantasy|Mystery",
+                  "qNum": "NaN",
+                  "qElemNumber": 111,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "157",
+                  "qNum": 157,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Family|Fantasy|Romance",
+                  "qNum": "NaN",
+                  "qElemNumber": 165,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "127",
+                  "qNum": 127,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Mystery",
+                  "qNum": "NaN",
+                  "qElemNumber": 162,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "105",
+                  "qNum": 105,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 168,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "107",
+                  "qNum": 107,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|War|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 135,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "123",
+                  "qNum": 123,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Adventure|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 11,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "138",
+                  "qNum": 138,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Animation|Action|Adventure",
+                  "qNum": "NaN",
+                  "qElemNumber": 31,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96",
+                  "qNum": 96,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Animation|Action|Adventure|Family",
+                  "qNum": "NaN",
+                  "qElemNumber": 179,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115",
+                  "qNum": 115,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Animation|Action|Adventure|Family|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 198,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "84",
+                  "qNum": 84,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Animation|Adventure|Family",
+                  "qNum": "NaN",
+                  "qElemNumber": 144,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "88",
+                  "qNum": 88,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Animation|Drama|Family|Fantasy|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 160,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "82",
+                  "qNum": 82,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Animation|Drama|Music",
+                  "qNum": "NaN",
+                  "qElemNumber": 26,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96",
+                  "qNum": 96,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Animation|Horror|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 17,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "124",
+                  "qNum": 124,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Comedy|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 72,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "113",
+                  "qNum": 113,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Comedy|Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 59,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "102",
+                  "qNum": 102,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Comedy|Drama|Music",
+                  "qNum": "NaN",
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "117",
+                  "qNum": 117,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 23,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "139,5",
+                  "qNum": 139.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 23,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "178",
+                  "qNum": 178,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 139,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "134,66667",
+                  "qNum": 134.66666666666666,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 139,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "172",
+                  "qNum": 172,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 139,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "195",
+                  "qNum": 195,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Biography|Drama|History|Romance",
+                  "qNum": "NaN",
+                  "qElemNumber": 189,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "135",
+                  "qNum": 135,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 19,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "87",
+                  "qNum": 87,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 19,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "97",
+                  "qNum": 97,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 195,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106",
+                  "qNum": 106,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Crime|Drama|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 153,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "95",
+                  "qNum": 95,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 80,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "108",
+                  "qNum": 108,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Crime|Drama|Thriller|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 57,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "98",
+                  "qNum": 98,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Crime|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 103,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "88",
+                  "qNum": 88,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Crime|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 147,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "93",
+                  "qNum": 93,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Crime|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 147,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "123",
+                  "qNum": 123,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 180,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Drama|Music",
+                  "qNum": "NaN",
+                  "qElemNumber": 201,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96",
+                  "qNum": 96,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Drama|Sport",
+                  "qNum": "NaN",
+                  "qElemNumber": 137,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "99",
+                  "qNum": 99,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 62,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115",
+                  "qNum": 115,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Family",
+                  "qNum": "NaN",
+                  "qElemNumber": 8,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "94",
+                  "qNum": 94,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Fantasy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 177,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "81",
+                  "qNum": 81,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 51,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "93,5",
+                  "qNum": 93.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 51,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "102",
+                  "qNum": 102,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 51,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Horror|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 161,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "96",
+                  "qNum": 96,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Comedy|Sci-Fi|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 88,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "95",
+                  "qNum": 95,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime",
+                  "qNum": "NaN",
+                  "qElemNumber": 69,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "95",
+                  "qNum": 95,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 27,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116",
+                  "qNum": 116,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 27,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "113",
+                  "qNum": 113,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 27,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "170",
+                  "qNum": 170,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 27,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "125",
+                  "qNum": 125,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 106,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "167",
+                  "qNum": 167,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Mystery",
+                  "qNum": "NaN",
+                  "qElemNumber": 134,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "110",
+                  "qNum": 110,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Mystery",
+                  "qNum": "NaN",
+                  "qElemNumber": 134,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "161",
+                  "qNum": 161,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Mystery|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 166,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "145",
+                  "qNum": 145,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 114,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "124,2",
+                  "qNum": 124.2,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 167,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115",
+                  "qNum": 115,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 167,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "142",
+                  "qNum": 142,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 9,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "136",
+                  "qNum": 136,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 12,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116,25",
+                  "qNum": 116.25,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 12,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "122,875",
+                  "qNum": 122.875,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Drama|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 30,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115",
+                  "qNum": 115,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 5,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "114,5",
+                  "qNum": 114.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 99,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "111",
+                  "qNum": 111,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 99,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "107,25",
+                  "qNum": 107.25,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Crime|Thriller|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 65,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "95",
+                  "qNum": 95,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Documentary|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 202,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116",
+                  "qNum": 116,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 98,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "151",
+                  "qNum": 151,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 98,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "139",
+                  "qNum": 139,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Fantasy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 49,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "98",
+                  "qNum": 98,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Fantasy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 49,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "128",
+                  "qNum": 128,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Fantasy|Horror|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 24,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "102",
+                  "qNum": 102,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Fantasy|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 53,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "132",
+                  "qNum": 132,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Fantasy|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 148,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "118",
+                  "qNum": 118,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|History",
+                  "qNum": "NaN",
+                  "qElemNumber": 176,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "124",
+                  "qNum": 124,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|History|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 90,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "154",
+                  "qNum": 154,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|History|Thriller|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 122,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "138",
+                  "qNum": 138,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|History|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 7,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "138,5",
+                  "qNum": 138.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|History|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 7,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "138",
+                  "qNum": 138,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|History|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 7,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "175",
+                  "qNum": 175,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|History|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 7,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "131",
+                  "qNum": 131,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Horror|Musical|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 170,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116",
+                  "qNum": 116,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Horror|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 63,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "110",
+                  "qNum": 110,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Musical|Romance",
+                  "qNum": "NaN",
+                  "qElemNumber": 190,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "143",
+                  "qNum": 143,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Mystery",
+                  "qNum": "NaN",
+                  "qElemNumber": 38,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116",
+                  "qNum": 116,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Mystery|Romance|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 35,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "123",
+                  "qNum": 123,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Mystery|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 86,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "113",
+                  "qNum": 113,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Mystery|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 200,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106",
+                  "qNum": 106,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 84,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "116,25",
+                  "qNum": 116.25,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 84,
+                  "qState": "O"
+                },
+                {
+                  "qText": "10",
+                  "qNum": 10,
+                  "qElemNumber": 5,
+                  "qState": "O"
+                },
+                {
+                  "qText": "138",
+                  "qNum": 138,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Romance",
+                  "qNum": "NaN",
+                  "qElemNumber": 110,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "162",
+                  "qNum": 162,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Romance|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 163,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "120",
+                  "qNum": 120,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 46,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "103,5",
+                  "qNum": 103.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 46,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "117",
+                  "qNum": 117,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 171,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "128",
+                  "qNum": 128,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 28,
+                  "qState": "O"
+                },
+                {
+                  "qText": "50",
+                  "qNum": 50,
+                  "qElemNumber": 6,
+                  "qState": "O"
+                },
+                {
+                  "qText": "88",
+                  "qNum": 88,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 28,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "153",
+                  "qNum": 153,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|War",
+                  "qNum": "NaN",
+                  "qElemNumber": 28,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "170",
+                  "qNum": 170,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Drama|War|Action",
+                  "qNum": "NaN",
+                  "qElemNumber": 109,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "110",
+                  "qNum": 110,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Fantasy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 75,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "121",
+                  "qNum": 121,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Fantasy|Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 75,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "94",
+                  "qNum": 94,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Film-Noir|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 194,
+                  "qState": "O"
+                },
+                {
+                  "qText": "40",
+                  "qNum": 40,
+                  "qElemNumber": 7,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104",
+                  "qNum": 104,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 13,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "99",
+                  "qNum": 99,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror",
+                  "qNum": "NaN",
+                  "qElemNumber": 13,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "92",
+                  "qNum": 92,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror|Mystery|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 193,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "109",
+                  "qNum": 109,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 116,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "110",
+                  "qNum": 110,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror|Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 116,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "93",
+                  "qNum": 93,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 20,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "93,666667",
+                  "qNum": 93.66666666666667,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 20,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "117",
+                  "qNum": 117,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror|Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 20,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "105",
+                  "qNum": 105,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror|Sci-Fi|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106,6",
+                  "qNum": 106.6,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Horror|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104,33333",
+                  "qNum": 104.33333333333333,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Mystery|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 138,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "104,5",
+                  "qNum": 104.5,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Sci-Fi",
+                  "qNum": "NaN",
+                  "qElemNumber": 94,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "97",
+                  "qNum": 97,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Sci-Fi|Action|Thriller",
+                  "qNum": "NaN",
+                  "qElemNumber": 156,
+                  "qState": "O"
+                },
+                {
+                  "qText": "0",
+                  "qNum": 0,
+                  "qElemNumber": 0,
+                  "qState": "O"
+                },
+                {
+                  "qText": "106",
+                  "qNum": 106,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Thriller|Comedy|Action",
+                  "qNum": "NaN",
+                  "qElemNumber": 113,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 1,
+                  "qState": "O"
+                },
+                {
+                  "qText": "90",
+                  "qNum": 90,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Thriller|Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 157,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "112",
+                  "qNum": 112,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "War|Drama",
+                  "qNum": "NaN",
+                  "qElemNumber": 151,
+                  "qState": "O"
+                },
+                {
+                  "qText": "80",
+                  "qNum": 80,
+                  "qElemNumber": 2,
+                  "qState": "O"
+                },
+                {
+                  "qText": "97",
+                  "qNum": 97,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 10,
+                  "qState": "O"
+                },
+                {
+                  "qText": "60",
+                  "qNum": 60,
+                  "qElemNumber": 4,
+                  "qState": "O"
+                },
+                {
+                  "qText": "115,875",
+                  "qNum": 115.875,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Western",
+                  "qNum": "NaN",
+                  "qElemNumber": 10,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "121",
+                  "qNum": 121,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ],
+              [
+                {
+                  "qText": "Western|Comedy",
+                  "qNum": "NaN",
+                  "qElemNumber": 70,
+                  "qState": "O"
+                },
+                {
+                  "qText": "70",
+                  "qNum": 70,
+                  "qElemNumber": 3,
+                  "qState": "O"
+                },
+                {
+                  "qText": "118",
+                  "qNum": 118,
+                  "qElemNumber": 0,
+                  "qState": "L"
+                }
+              ]
+            ],
+            "qTails": [
+              {
+                "qUp": 0,
+                "qDown": 0
+              },
+              {
+                "qUp": 0,
+                "qDown": 0
+              }
+            ],
+            "qArea": {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 3,
+              "qHeight": 300
+            }
+          }
+        ],
+        "qPivotDataPages": [],
+        "qStackedDataPages": [],
+        "qMode": "S",
+        "qNoOfLeftDims": -1,
+        "qTreeNodesOnDim": [],
+        "qColumnOrder": []
+      },
+      "showTitles": true,
+      "title": "",
+      "subtitle": "",
+      "footnote": "",
+      "disableNavMenu": false,
+      "showDetails": false,
+      "strokeStyle": true,
+      "range": true,
+      "maxValue": 1,
+      "minValue": 0,
+      "showLegend": true,
+      "ColorSchema": [
+        "#332288",
+        "#6699CC",
+        "#88CCEE",
+        "#44AA99",
+        "#117733",
+        "#999933",
+        "#DDCC77",
+        "#661100",
+        "#CC6677",
+        "#AA4466",
+        "#882255",
+        "#AA4499"
+      ],
+      "visualization": "qlik-radar-chart",
+      "version": "0.48.0",
+      "extensionMeta": {
+        "translationKey": "",
+        "icon": "auto-layout",
+        "iconChar": "puzzle",
+        "isLibraryItem": true,
+        "visible": true,
+        "name": "Radar chart",
+        "description": "A two-dimensional chart using radial axes to show the scoring of a measure in one dimension over another.\nVersion: 0.48.0",
+        "template": "qlik-radar-chart",
+        "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+        "isThirdParty": true,
+        "author": "Brian Booden <brianbooden@users.noreply.github.com>, VizMatt <matthieu.burel@gmail.com>",
+        "bundle": {
+          "id": "qlik-visualization-bundle",
+          "name": "Qlik Visualization bundle",
+          "description": "This is a set of supported objects that expands the visualization capabilities of Qlik Sense. These can be used in addition to the objects found under 'Charts'. For support conditions and limitations, see the documentation."
+        },
+        "dependencies": {
+          "qlik-sense": ">=5.5.x"
+        },
+        "homepage": "",
+        "installer": "QlikExtensionBundler",
+        "keywords": "qlik-sense, visualization",
+        "license": "MIT",
+        "preview": "qlik-radar-chart.png",
+        "repository": "https://github.com/qlik-oss/D3ImprovedRadarChart",
+        "type": "visualization",
+        "version": "0.48.0",
+        "previewIconURL": "https://cloudanalytic.ru/extensions/qlik-radar-chart/qlik-radar-chart.png"
+      }
+    }
+  }
+}

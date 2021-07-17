@@ -1,0 +1,762 @@
+{
+  "jsonrpc": "2.0",
+  "id": 4,
+  "delta": true,
+  "result": {
+    "qLayout": {
+      "qInfo": {
+        "qId": "7b89190c-320e-4aca-8f26-b22e4b74bd23",
+        "qType": "boxplot"
+      },
+      "qMeta": {
+        "privileges": [
+          "read",
+          "update",
+          "delete",
+          "exportdata"
+        ]
+      },
+      "qSelectionInfo": {},
+      "boxplotDef": {
+        "qHyperCube": {
+          "qSize": {
+            "qcx": 3,
+            "qcy": 8000
+          },
+          "qDimensionInfo": [
+            {
+              "qFallbackTitle": "Дата",
+              "qApprMaxGlyphCount": 10,
+              "qCardinal": 8,
+              "qSortIndicator": "A",
+              "qGroupFallbackTitles": [
+                "Дата"
+              ],
+              "qGroupPos": 0,
+              "qStateCounts": {
+                "qLocked": 0,
+                "qSelected": 0,
+                "qOption": 8,
+                "qDeselected": 0,
+                "qAlternative": 0,
+                "qExcluded": 0,
+                "qSelectedExcluded": 0,
+                "qLockedExcluded": 0
+              },
+              "qTags": [
+                "$axis",
+                "$date",
+                "$qualified",
+                "$numeric",
+                "$integer",
+                "$timestamp"
+              ],
+              "qDimensionType": "N",
+              "qGrouping": "N",
+              "qNumFormat": {
+                "qType": "D",
+                "qnDec": 0,
+                "qUseThou": 0,
+                "qFmt": "DD.MM.YYYY"
+              },
+              "qIsAutoFormat": true,
+              "qGroupFieldDefs": [
+                "Дата.autoCalendar.Date"
+              ],
+              "qMin": 43678,
+              "qMax": 43891,
+              "qContinuousAxes": true,
+              "qDerivedField": true,
+              "qAttrExprInfo": [],
+              "qAttrDimInfo": [],
+              "qCardinalities": {
+                "qCardinal": 8,
+                "qHypercubeCardinal": 8,
+                "qAllValuesCardinal": -1
+              },
+              "qLibraryId": "pedANrQ",
+              "title": "Дата",
+              "coloring": {
+                "changeHash": "0.3175290703947591"
+              },
+              "autoSort": true,
+              "cId": "vtThC",
+              "othersLabel": "Другие"
+            },
+            {
+              "qFallbackTitle": "Товар",
+              "qApprMaxGlyphCount": 11,
+              "qCardinal": 1000,
+              "qSortIndicator": "A",
+              "qGroupFallbackTitles": [
+                "Товар"
+              ],
+              "qGroupPos": 0,
+              "qStateCounts": {
+                "qLocked": 0,
+                "qSelected": 0,
+                "qOption": 1000,
+                "qDeselected": 0,
+                "qAlternative": 0,
+                "qExcluded": 0,
+                "qSelectedExcluded": 0,
+                "qLockedExcluded": 0
+              },
+              "qTags": [
+                "$ascii",
+                "$text"
+              ],
+              "qDimensionType": "D",
+              "qGrouping": "N",
+              "qNumFormat": {
+                "qType": "U",
+                "qnDec": 0,
+                "qUseThou": 0
+              },
+              "qIsAutoFormat": true,
+              "qGroupFieldDefs": [
+                "PART_NO"
+              ],
+              "qMin": "NaN",
+              "qMax": "NaN",
+              "qAttrExprInfo": [],
+              "qAttrDimInfo": [],
+              "qCardinalities": {
+                "qCardinal": 1000,
+                "qHypercubeCardinal": 1000,
+                "qAllValuesCardinal": -1
+              },
+              "qLibraryId": "vnDTkA",
+              "title": "Товар",
+              "coloring": {
+                "changeHash": "0.6167664108861397"
+              },
+              "autoSort": true,
+              "cId": "uKJrmq",
+              "othersLabel": "Другие"
+            }
+          ],
+          "qMeasureInfo": [
+            {
+              "qFallbackTitle": "Сумма",
+              "qApprMaxGlyphCount": 7,
+              "qCardinal": 0,
+              "qSortIndicator": "D",
+              "qNumFormat": {
+                "qType": "I",
+                "qnDec": 0,
+                "qUseThou": 1,
+                "qFmt": "###0",
+                "qDec": ","
+              },
+              "qMin": 0,
+              "qMax": 1592,
+              "qIsAutoFormat": true,
+              "qAttrExprInfo": [],
+              "qAttrDimInfo": [],
+              "qLibraryId": "jmYpFJ",
+              "qTrendLines": [],
+              "coloring": {},
+              "autoSort": true,
+              "cId": "mANeQX",
+              "numFormatFromTemplate": true,
+              "isCustomFormatted": false
+            }
+          ],
+          "qEffectiveInterColumnSortOrder": [
+            2,
+            0,
+            1
+          ],
+          "qGrandTotalRow": [
+            {
+              "qText": "6337912",
+              "qNum": 6337912,
+              "qElemNumber": -1,
+              "qState": "X",
+              "qIsTotalCell": true
+            }
+          ],
+          "qDataPages": [],
+          "qPivotDataPages": [],
+          "qStackedDataPages": [],
+          "qMode": "S",
+          "qNoOfLeftDims": -1,
+          "qTreeNodesOnDim": [],
+          "qColumnOrder": []
+        },
+        "calculations": {
+          "auto": true,
+          "mode": "fractiles",
+          "parameters": {
+            "tukey": 1.5,
+            "fractiles": 0.01,
+            "stdDev": 3
+          }
+        },
+        "elements": {
+          "firstWhisker": {
+            "name": "",
+            "expression": null
+          },
+          "boxStart": {
+            "name": "",
+            "expression": null
+          },
+          "boxMiddle": {
+            "name": "",
+            "expression": null
+          },
+          "boxEnd": {
+            "name": "",
+            "expression": null
+          },
+          "lastWhisker": {
+            "name": "",
+            "expression": null
+          },
+          "outliers": {
+            "include": true
+          }
+        },
+        "presentation": {
+          "whiskers": {
+            "show": true
+          }
+        },
+        "color": {
+          "auto": false,
+          "mode": "primary",
+          "box": {
+            "paletteColor": {
+              "index": -1,
+              "color": "#67e663"
+            }
+          },
+          "point": {
+            "paletteColor": {
+              "index": 10,
+              "color": "#f93f17"
+            }
+          },
+          "expressionIsColor": true
+        },
+        "sorting": {
+          "autoSort": true
+        }
+      },
+      "refLine": {
+        "refLines": []
+      },
+      "showTitles": true,
+      "title": "Блочная диаграмма",
+      "subtitle": "",
+      "footnote": "",
+      "showDetails": false,
+      "orientation": "horizontal",
+      "gridlines": {
+        "auto": false,
+        "spacing": 0
+      },
+      "measureAxis": {
+        "show": "labels",
+        "dock": "near",
+        "spacing": 1,
+        "autoMinMax": true,
+        "minMax": "min",
+        "min": 0,
+        "max": 10
+      },
+      "dimensionAxis": {
+        "show": "labels",
+        "label": "auto",
+        "dock": "near"
+      },
+      "visualization": "boxplot",
+      "qUndoExclude": {
+        "hashCode": -982816338,
+        "box": {
+          "qHyperCube": {
+            "qSize": {
+              "qcx": 6,
+              "qcy": 1000
+            },
+            "qDimensionInfo": [
+              {
+                "qFallbackTitle": "Товар",
+                "qApprMaxGlyphCount": 11,
+                "qCardinal": 1000,
+                "qSortIndicator": "A",
+                "qGroupFallbackTitles": [
+                  "Товар"
+                ],
+                "qGroupPos": 0,
+                "qStateCounts": {
+                  "qLocked": 0,
+                  "qSelected": 0,
+                  "qOption": 1000,
+                  "qDeselected": 0,
+                  "qAlternative": 0,
+                  "qExcluded": 0,
+                  "qSelectedExcluded": 0,
+                  "qLockedExcluded": 0
+                },
+                "qTags": [
+                  "$ascii",
+                  "$text"
+                ],
+                "qDimensionType": "D",
+                "qGrouping": "N",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qIsAutoFormat": true,
+                "qGroupFieldDefs": [
+                  "PART_NO"
+                ],
+                "qMin": "NaN",
+                "qMax": "NaN",
+                "qAttrExprInfo": [],
+                "qAttrDimInfo": [],
+                "qCardinalities": {
+                  "qCardinal": 1000,
+                  "qHypercubeCardinal": 1000,
+                  "qAllValuesCardinal": -1
+                },
+                "qLibraryId": "vnDTkA",
+                "title": "Товар",
+                "coloring": {
+                  "changeHash": "0.6167664108861397"
+                },
+                "autoSort": true,
+                "cId": "uKJrmq",
+                "othersLabel": "Другие"
+              }
+            ],
+            "qMeasureInfo": [
+              {
+                "qFallbackTitle": "Первый \"ус\"",
+                "qApprMaxGlyphCount": 6,
+                "qCardinal": 0,
+                "qSortIndicator": "N",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qMin": 0,
+                "qMax": 934.16,
+                "qIsAutoFormat": true,
+                "qAttrExprInfo": [
+                  {
+                    "qMin": "NaN",
+                    "qMax": "NaN",
+                    "qFallbackTitle": "='1-й процентиль'",
+                    "qNumFormat": {
+                      "qType": "U",
+                      "qnDec": 0,
+                      "qUseThou": 0
+                    },
+                    "qIsAutoFormat": true,
+                    "id": "tooltip"
+                  }
+                ],
+                "qAttrDimInfo": [],
+                "qTrendLines": [],
+                "isCustomFormatted": false,
+                "cId": "fEE"
+              },
+              {
+                "qFallbackTitle": "Начало поля",
+                "qApprMaxGlyphCount": 4,
+                "qCardinal": 0,
+                "qSortIndicator": "N",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qMin": 6,
+                "qMax": 1238,
+                "qIsAutoFormat": true,
+                "qAttrExprInfo": [
+                  {
+                    "qMin": "NaN",
+                    "qMax": "NaN",
+                    "qFallbackTitle": "='Первый квартиль'",
+                    "qNumFormat": {
+                      "qType": "U",
+                      "qnDec": 0,
+                      "qUseThou": 0
+                    },
+                    "qIsAutoFormat": true,
+                    "id": "tooltip"
+                  }
+                ],
+                "qAttrDimInfo": [],
+                "qTrendLines": [],
+                "isCustomFormatted": false,
+                "cId": "UYPFmzL"
+              },
+              {
+                "qFallbackTitle": "Осевая линия",
+                "qApprMaxGlyphCount": 4,
+                "qCardinal": 0,
+                "qSortIndicator": "N",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qMin": 80,
+                "qMax": 1440,
+                "qIsAutoFormat": true,
+                "qAttrExprInfo": [
+                  {
+                    "qMin": "NaN",
+                    "qMax": "NaN",
+                    "qFallbackTitle": "='Медианное'",
+                    "qNumFormat": {
+                      "qType": "U",
+                      "qnDec": 0,
+                      "qUseThou": 0
+                    },
+                    "qIsAutoFormat": true,
+                    "id": "tooltip"
+                  }
+                ],
+                "qAttrDimInfo": [],
+                "qTrendLines": [],
+                "isCustomFormatted": false,
+                "cId": "LSjpqsz"
+              },
+              {
+                "qFallbackTitle": "Конец поля",
+                "qApprMaxGlyphCount": 4,
+                "qCardinal": 0,
+                "qSortIndicator": "N",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qMin": 194,
+                "qMax": 1548,
+                "qIsAutoFormat": true,
+                "qAttrExprInfo": [
+                  {
+                    "qMin": "NaN",
+                    "qMax": "NaN",
+                    "qFallbackTitle": "='Третий квартиль'",
+                    "qNumFormat": {
+                      "qType": "U",
+                      "qnDec": 0,
+                      "qUseThou": 0
+                    },
+                    "qIsAutoFormat": true,
+                    "id": "tooltip"
+                  }
+                ],
+                "qAttrDimInfo": [],
+                "qTrendLines": [],
+                "isCustomFormatted": false,
+                "cId": "BaaPv"
+              },
+              {
+                "qFallbackTitle": "Последний \"ус\"",
+                "qApprMaxGlyphCount": 7,
+                "qCardinal": 0,
+                "qSortIndicator": "N",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qMin": 666.96,
+                "qMax": 1590.8799999999999,
+                "qIsAutoFormat": true,
+                "qAttrExprInfo": [
+                  {
+                    "qMin": "NaN",
+                    "qMax": "NaN",
+                    "qFallbackTitle": "='99-й процентиль'",
+                    "qNumFormat": {
+                      "qType": "U",
+                      "qnDec": 0,
+                      "qUseThou": 0
+                    },
+                    "qIsAutoFormat": true,
+                    "id": "tooltip"
+                  }
+                ],
+                "qAttrDimInfo": [],
+                "qTrendLines": [],
+                "isCustomFormatted": false,
+                "cId": "NvCjmP"
+              }
+            ],
+            "qEffectiveInterColumnSortOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "qGrandTotalRow": [
+              {
+                "qText": "8",
+                "qNum": 8,
+                "qElemNumber": -1,
+                "qState": "X",
+                "qIsTotalCell": true
+              },
+              {
+                "qText": "384",
+                "qNum": 384,
+                "qElemNumber": -1,
+                "qState": "X",
+                "qIsTotalCell": true
+              },
+              {
+                "qText": "792",
+                "qNum": 792,
+                "qElemNumber": -1,
+                "qState": "X",
+                "qIsTotalCell": true
+              },
+              {
+                "qText": "1200",
+                "qNum": 1200,
+                "qElemNumber": -1,
+                "qState": "X",
+                "qIsTotalCell": true
+              },
+              {
+                "qText": "1576",
+                "qNum": 1576,
+                "qElemNumber": -1,
+                "qState": "X",
+                "qIsTotalCell": true
+              }
+            ],
+            "qDataPages": [],
+            "qPivotDataPages": [],
+            "qStackedDataPages": [],
+            "qMode": "S",
+            "qNoOfLeftDims": -1,
+            "qTreeNodesOnDim": [],
+            "qColumnOrder": []
+          }
+        },
+        "outliers": {
+          "qHyperCube": {
+            "qSize": {
+              "qcx": 1,
+              "qcy": 2719
+            },
+            "qDimensionInfo": [
+              {
+                "qFallbackTitle": "=aggr( If( Sum([Сумма]) < Fractile( total <[PART_NO]> Aggr( Sum([Сумма]), [PART_NO], [Дата.autoCalendar.Date] ) ,0.01 ) or Sum([Сумма]) > Fractile( total <[PART_NO]> Aggr( Sum([Сумма]), [PART_NO], [Дата.autoCalendar.Date] ) ,0.99 ) or Alt( Aggr( RowNo(), [PART_NO], [Дата.autoCalendar.Date] ), 1 ) = 1, [PART_NO] & [Дата.autoCalendar.Date] ), [Дата.autoCalendar.Date], [PART_NO] )",
+                "qApprMaxGlyphCount": 21,
+                "qCardinal": 2719,
+                "qSortIndicator": "A",
+                "qGroupFallbackTitles": [
+                  "=aggr( If( Sum([Сумма]) < Fractile( total <[PART_NO]> Aggr( Sum([Сумма]), [PART_NO], [Дата.autoCalendar.Date] ) ,0.01 ) or Sum([Сумма]) > Fractile( total <[PART_NO]> Aggr( Sum([Сумма]), [PART_NO], [Дата.autoCalendar.Date] ) ,0.99 ) or Alt( Aggr( RowNo(), [PART_NO], [Дата.autoCalendar.Date] ), 1 ) = 1, [PART_NO] & [Дата.autoCalendar.Date] ), [Дата.autoCalendar.Date], [PART_NO] )"
+                ],
+                "qGroupPos": 0,
+                "qStateCounts": {
+                  "qLocked": 0,
+                  "qSelected": 0,
+                  "qOption": 2719,
+                  "qDeselected": 0,
+                  "qAlternative": 0,
+                  "qExcluded": 0,
+                  "qSelectedExcluded": 0,
+                  "qLockedExcluded": 0
+                },
+                "qTags": [
+                  "$ascii",
+                  "$text"
+                ],
+                "qDimensionType": "N",
+                "qGrouping": "N",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qIsAutoFormat": true,
+                "qGroupFieldDefs": [
+                  "=aggr( If( Sum([Сумма]) < Fractile( total <[PART_NO]> Aggr( Sum([Сумма]), [PART_NO], [Дата.autoCalendar.Date] ) ,0.01 ) or Sum([Сумма]) > Fractile( total <[PART_NO]> Aggr( Sum([Сумма]), [PART_NO], [Дата.autoCalendar.Date] ) ,0.99 ) or Alt( Aggr( RowNo(), [PART_NO], [Дата.autoCalendar.Date] ), 1 ) = 1, [PART_NO] & [Дата.autoCalendar.Date] ), [Дата.autoCalendar.Date], [PART_NO] )"
+                ],
+                "qMin": "NaN",
+                "qMax": "NaN",
+                "qAttrExprInfo": [],
+                "qAttrDimInfo": [],
+                "qIsCalculated": true,
+                "qCardinalities": {
+                  "qCardinal": 2719,
+                  "qHypercubeCardinal": 2719,
+                  "qAllValuesCardinal": -1
+                },
+                "autoSort": true,
+                "cId": "CnAj",
+                "othersLabel": "Другие"
+              },
+              {
+                "qFallbackTitle": "Товар",
+                "qApprMaxGlyphCount": 11,
+                "qCardinal": 1000,
+                "qSortIndicator": "A",
+                "qGroupFallbackTitles": [
+                  "Товар"
+                ],
+                "qGroupPos": 0,
+                "qStateCounts": {
+                  "qLocked": 0,
+                  "qSelected": 0,
+                  "qOption": 1000,
+                  "qDeselected": 0,
+                  "qAlternative": 0,
+                  "qExcluded": 0,
+                  "qSelectedExcluded": 0,
+                  "qLockedExcluded": 0
+                },
+                "qTags": [
+                  "$ascii",
+                  "$text"
+                ],
+                "qDimensionType": "D",
+                "qGrouping": "N",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qIsAutoFormat": true,
+                "qGroupFieldDefs": [
+                  "PART_NO"
+                ],
+                "qMin": "NaN",
+                "qMax": "NaN",
+                "qAttrExprInfo": [],
+                "qAttrDimInfo": [],
+                "qCardinalities": {
+                  "qCardinal": 1000,
+                  "qHypercubeCardinal": 1000,
+                  "qAllValuesCardinal": -1
+                },
+                "qLibraryId": "vnDTkA",
+                "title": "Товар",
+                "coloring": {
+                  "changeHash": "0.6167664108861397"
+                },
+                "autoSort": true,
+                "cId": "uKJrmq",
+                "othersLabel": "Другие"
+              },
+              {
+                "qFallbackTitle": "Дата",
+                "qApprMaxGlyphCount": 10,
+                "qCardinal": 8,
+                "qSortIndicator": "A",
+                "qGroupFallbackTitles": [
+                  "Дата"
+                ],
+                "qGroupPos": 0,
+                "qStateCounts": {
+                  "qLocked": 0,
+                  "qSelected": 0,
+                  "qOption": 8,
+                  "qDeselected": 0,
+                  "qAlternative": 0,
+                  "qExcluded": 0,
+                  "qSelectedExcluded": 0,
+                  "qLockedExcluded": 0
+                },
+                "qTags": [
+                  "$axis",
+                  "$date",
+                  "$qualified",
+                  "$numeric",
+                  "$integer",
+                  "$timestamp"
+                ],
+                "qDimensionType": "N",
+                "qGrouping": "N",
+                "qNumFormat": {
+                  "qType": "D",
+                  "qnDec": 0,
+                  "qUseThou": 0,
+                  "qFmt": "DD.MM.YYYY"
+                },
+                "qIsAutoFormat": true,
+                "qGroupFieldDefs": [
+                  "Дата.autoCalendar.Date"
+                ],
+                "qMin": 43678,
+                "qMax": 43891,
+                "qContinuousAxes": true,
+                "qDerivedField": true,
+                "qAttrExprInfo": [],
+                "qAttrDimInfo": [],
+                "qCardinalities": {
+                  "qCardinal": 8,
+                  "qHypercubeCardinal": 8,
+                  "qAllValuesCardinal": -1
+                },
+                "qLibraryId": "pedANrQ",
+                "title": "Дата",
+                "coloring": {
+                  "changeHash": "0.3175290703947591"
+                },
+                "autoSort": true,
+                "cId": "vtThC",
+                "othersLabel": "Другие"
+              }
+            ],
+            "qMeasureInfo": [
+              {
+                "qFallbackTitle": "=aggr( If( Sum([Сумма]) < Fractile( total <[PART_NO]> Aggr( Sum([Сумма]), [PART_NO], [Дата.autoCalendar.Date] ) ,0.01 ) or Sum([Сумма]) > Fractile( total <[PART_NO]> Aggr( Sum([Сумма]), [PART_NO], [Дата.autoCalendar.Date] ) ,0.99 ), Sum([Сумма]) ), [Дата.autoCalendar.Date], [PART_NO] )",
+                "qApprMaxGlyphCount": 4,
+                "qCardinal": 0,
+                "qSortIndicator": "D",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 0,
+                  "qUseThou": 0
+                },
+                "qMin": 0,
+                "qMax": 1592,
+                "qIsAutoFormat": true,
+                "qAttrExprInfo": [],
+                "qAttrDimInfo": [],
+                "qTrendLines": [],
+                "autoSort": true,
+                "cId": "mANeQX",
+                "numFormatFromTemplate": true,
+                "isCustomFormatted": false
+              }
+            ],
+            "qEffectiveInterColumnSortOrder": [
+              1,
+              0,
+              2
+            ],
+            "qGrandTotalRow": [],
+            "qDataPages": [],
+            "qPivotDataPages": [],
+            "qStackedDataPages": [],
+            "qMode": "K",
+            "qNoOfLeftDims": 3,
+            "qTreeNodesOnDim": [],
+            "qColumnOrder": []
+          }
+        }
+      }
+    }
+  }
+}

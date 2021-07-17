@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+        <!-- angular.js -->
+        <script src="libs/angular.min.js" charset="utf-8"></script>
+        <script src="libs/lodash.min.js" charset="utf-8"></script>
+
+        <!-- D3.js -->
+        <script src="libs/d3.min.js" charset="utf-8"></script>
+        <script src="libs/d3-scale.min.js" charset="utf-8"></script>
+        <script src="libs/d3-shape.min.js" charset="utf-8"></script>
+        <script src="libs/d3-interpolate.min.js" charset="utf-8"></script>
+        <script src="libs/d3-format.min.js" charset="utf-8"></script>
+        <script src="libs/d3-legend.js" charset="utf-8"></script>
+
+        <style>
+            body {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 11px;
+                font-weight: 300;
+                fill: #242424;
+                text-align: center;
+                text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+                cursor: default;
+            }
+
+            .legend {
+                font-family: 'Raleway', sans-serif;
+                fill: #333333;
+            }
+
+            .tooltip {
+                fill: #333333;
+            }
+
+            .rc {
+                display: inline-block;
+                text-align: center;
+            }
+
+            .rc > svg {
+                border: 1px solid #000;
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+            button {
+                width:100px;
+                height: 45px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <app-comp-example-two></app-comp-example-two>
+
+        <script src="js/radarChart.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
