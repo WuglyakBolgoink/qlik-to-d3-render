@@ -1,17 +1,24 @@
-String.prototype.hashCode = function () {
-    var hash = 0,
-        i,
-        chr;
-    if (this.length === 0) {
+'use strict';
+
+if (!String.prototype.hashCode) {
+    String.prototype.hashCode = function () {
+        if (this.length === 0) {
+            return 0;
+        }
+
+        let hash = 0;
+        let i;
+        let chr;
+
+        for (i = 0; i < this.length; i++) {
+            chr = this.charCodeAt(i);
+            hash = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+
         return hash;
-    }
-    for (i = 0; i < this.length; i++) {
-        chr = this.charCodeAt(i);
-        hash = ((hash << 5) - hash) + chr;
-        hash |= 0; // Convert to 32bit integer
-    }
-    return hash;
-};
+    };
+}
 
 function RadarChart(id, data, options) {
     const cfg = {
@@ -534,4 +541,16 @@ function RadarChart(id, data, options) {
         return found.dataValues.map(el => el.axis).indexOf(d.axis) + startAfterOtherCirle;
     }
 
-}//RadarChart
+}
+
+class QlikRadarRenderService {
+
+    getRadarChart() {
+        return RadarChart;
+    }
+
+}
+
+angular
+    .module('qlik.ui.radar')
+    .service('QlikRadarRenderService', QlikRadarRenderService);
