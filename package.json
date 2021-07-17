@@ -4,32 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node server.js"
+    "serve": "gulp",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/d3": "^7.0.0",
-    "angular": "^1.8.2",
-    "d3": "^7.0.0",
+    "angular": "1.8.2",
+    "d3": "7.0.0",
     "d3-format": "3.0.1",
     "d3-interpolate": "3.0.1",
     "d3-scale": "4.0.0",
     "d3-shape": "3.0.1",
     "d3-svg-legend": "2.25.6",
-    "i": "0.3.6",
-    "lodash": "4.17.21",
-    "npm": "7.19.1"
+    "lodash": "4.17.21"
   },
   "devDependencies": {
+    "@types/d3": "7.0.0",
     "browser-sync": "2.27.4",
     "del": "6.0.0",
     "fancy-log": "1.3.3",
     "gulp": "4.0.2",
     "gulp-concat": "2.6.1",
-    "gulp-iife": "0.4.0",
-    "live-server": "^1.2.1"
+    "gulp-iife": "0.4.0"
   }
 }

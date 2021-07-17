@@ -65,7 +65,7 @@ function livereload(cb) {
         tunnel: false,
         open: true,
         host: 'localhost',
-        port: 3030,
+        port: 8080,
         logPrefix: 'qlik',
         logLevel: 'debug',
         notify: false,
@@ -84,8 +84,8 @@ function livereload(cb) {
             // 'firefox'  // tested on MacOS
         ],
         reloadOnRestart: false,
-        reloadDelay: 2000,
-        reloadDebounce: 2000,
+        // reloadDelay: 2000,
+        // reloadDebounce: 2000,
         injectChanges: true,
         minify: false,
         watchOptions: {
