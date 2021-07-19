@@ -22,6 +22,8 @@ class QlikRadarChartController {
     $onInit() {
         console.log('this.cmpData', this.cmpData);
 
+        this.inputs = {};
+
         const margin = {
             top: 100,
             right: 100,
@@ -35,7 +37,7 @@ class QlikRadarChartController {
             y: 25
         };
 
-        const radarChartOptions = {
+        this.radarChartOptions = {
             w: width,
             h: height,
             margin: margin,
@@ -45,21 +47,59 @@ class QlikRadarChartController {
             color: d3.scaleOrdinal().range([ ...this.cmpData.colorSchema ]),
             colorSchema: this.cmpData.colorSchema,
             showLegend: this.cmpData.options.showLegend,
-            legendTitle: this.cmpData.options.showLegend || '',
+            legendTitle: this.cmpData.options.showLegend ? this.cmpData.options.legendTitle : '',
             legendPosition: legendPosition,
             axisName: 'axis',
             areaName: 'category',
             value: 'value'
         };
 
-        //Call function to draw the Radar chart
+        this.categories = this.cmpData.data.map(el => el.key);
+
+        this.drawAll();
+    }
+
+    drawAll() {
+        this.inputs = {
+            '-1': this.inputs['-1']
+        };
+
         this.$timeout(() => {
             const chart = this.QlikRadarRenderService.getRadarChart();
 
-            chart(`.${ this.cmpClass }`, this.cmpData.data, radarChartOptions);
-
-            this.$scope.$applyAsync();
+            chart(`.${ this.cmpClass }`, this.cmpData.data, this.radarChartOptions);
         }, 0);
+    }
+
+    drawCategories() {
+        delete this.inputs['-1'];
+
+        const indices = [];
+        for (const [ key, value ] of Object.entries(this.inputs)) {
+            if (value) {
+                indices.push(+key);
+            }
+        }
+
+        const partialData = indices.map(index => this.cmpData.data[index]);
+
+        console.log('[drawCategories] partialData', partialData);
+        console.log('[drawCategories] partialData', JSON.stringify(partialData, null, 2));
+
+        partialData.forEach(el=>{
+            console.log('[el]', el.key);
+            console.table(el.values);
+        })
+
+        if (partialData.length) {
+            this.$timeout(() => {
+                const chart = this.QlikRadarRenderService.getRadarChart();
+
+                chart(`.${ this.cmpClass }`, partialData, this.radarChartOptions);
+            }, 0);
+        } else {
+            this.drawAll();
+        }
     }
 }
 
@@ -72,7 +112,19 @@ QlikRadarChartController.$inject = [
 angular
     .module('qlik.ui.radar')
     .component('qlikRadarChart', {
-        template: '<div class="rc" data-ng-class="$ctrl.cmpClass"></div>',
+        template: `
+            <div>
+                <label>
+                <input type="checkbox" ng-model="$ctrl.inputs[-1]" ng-change="$ctrl.drawAll()">
+                all
+                </label>
+                <label ng-repeat="category in $ctrl.categories track by $index">
+                <input type="checkbox" ng-value="false" ng-model="$ctrl.inputs[$index]" ng-change="$ctrl.drawCategories()">
+                {{category}}
+                </label>
+            </div>
+            <div class="rc" data-ng-class="$ctrl.cmpClass"></div>
+        `,
         bindings: {
             cmpClass: '@',
             cmpData: '<',

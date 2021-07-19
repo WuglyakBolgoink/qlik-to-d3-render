@@ -53,7 +53,6 @@ function RadarChart(id, data, options) {
             circle: {
                 fill: '#cdcdcd',
                 stroke: '#cdcdcd'
-
             },
             text: {
                 fill: '#000'
@@ -70,29 +69,7 @@ function RadarChart(id, data, options) {
 
     const categories = data.map(el => el.key);
 
-    //Calculate the average value for each area
-    // data = data.map(function (d) {
-    //     const average = d3.mean(d.values, (e) => {
-    //         return e[valueField];
-    //     });
-    //
-    //     d[`${ valueField }Average`] = Number(average.toFixed(2));
-    //
-    //     return d;
-    // });
-
-    // console.log('[RadarChart] data', data);
-
-    // Sort the data for the areas from largest to smallest
-    // by average value as an approximation of actual blob area
-    // so that that the smallest area is drawn last
-    // and therefore appears on top
-    // data = data.sort(function (a, b) {
-    //     const aAverage = a[`${ valueField }Average`];
-    //     const bAverage = b[`${ valueField }Average`];
-    //
-    //     return bAverage - aAverage;
-    // });
+    console.log('[RadarChart] categories', categories);
 
     // Convert the nested data passed in
     // into an array of values arrays
@@ -100,7 +77,7 @@ function RadarChart(id, data, options) {
         return d.values;
     });
 
-    // console.log('[RadarChart] data', data);
+    console.log('[RadarChart] data', data);
 
     // If the supplied maxValue is smaller than the actual one, replace by the max in the data
     const maxValue = Math.max(cfg.maxValue, getMaxValue(data));
@@ -108,15 +85,16 @@ function RadarChart(id, data, options) {
     const allAxis = getAllAxis(data); // Names of each axis
     const total = allAxis.length; // The number of different axes
 
-    // console.log('[RadarChart] allAxis', JSON.stringify(allAxis, null, 2));
+    console.log('[RadarChart] allAxis', JSON.stringify(allAxis, null, 2));
+    console.log('[RadarChart] total', total);
 
     const radius = Math.min(cfg.w / 2, cfg.h / 2); // Radius of the outermost circle
     const angleSlice = Math.PI * 2 / total; // The width in radians of each "slice"
 
     // Scale for the radius
     const rScale = d3.scaleLinear()
-        .range([ 0, radius ])
-        .domain([ 0, maxValue ]);
+        .range([0, radius])
+        .domain([0, maxValue]);
 
     /////////////////////////////////////////////////////////
     //////////// Create the container SVG and g /////////////
@@ -133,7 +111,7 @@ function RadarChart(id, data, options) {
         .attr('height', cfg.h + cfg.margin.top + cfg.margin.bottom)
         .attr('class', 'radar' + id.hashCode());
 
-    //Append a g element
+    // Append a g element
     const g = svg.append('g')
         .attr('transform', 'translate(' + (cfg.w / 2 + cfg.margin.left) + ',' + (cfg.h / 2 + cfg.margin.top) + ')');
 
@@ -141,7 +119,7 @@ function RadarChart(id, data, options) {
     ////////// Glow filter for some extra pizzazz ///////////
     /////////////////////////////////////////////////////////
 
-    //Filter for the outside glow
+    // Filter for the outside glow
     const filter = g.append('defs').append('filter').attr('id', 'glow');
     const feGaussianBlur = filter.append('feGaussianBlur').attr('stdDeviation', '2.5').attr('result', 'coloredBlur');
     const feMerge = filter.append('feMerge');
@@ -152,10 +130,10 @@ function RadarChart(id, data, options) {
     /////////////// Draw the Circular grid //////////////////
     /////////////////////////////////////////////////////////
 
-    //Wrapper for the grid & axes
+    // Wrapper for the grid & axes
     const axisGrid = g.append('g').attr('class', 'axisWrapper');
 
-    //Draw the background circles
+    // Draw the background circles
     axisGrid
         .selectAll('.levels')
         .data(d3.range(1, (cfg.levels + 1)).reverse())
@@ -186,7 +164,7 @@ function RadarChart(id, data, options) {
         .attr('fill', cfg.colors.text.fill)
         .text((d, i) => {
             const circleSectionValue = (maxValue * d) / cfg.levels;
-            return Number(Math.floor(circleSectionValue).toFixed(0));
+            return Number(Math.floor(circleSectionValue).toFixed(0)); // todo: добавить динамичное округление?
         });
 
     /////////////////////////////////////////////////////////
@@ -247,6 +225,7 @@ function RadarChart(id, data, options) {
                 return getPosition(d) * angleSlice;
             }
 
+            console.error('[radarLine] return position - 0');
             return 0; // should not happens
         });
 
@@ -412,7 +391,7 @@ function RadarChart(id, data, options) {
                 if (tspan.node().getComputedTextLength() > width) {
                     line.pop();
                     tspan.text(line.join(' '));
-                    line = [ word ];
+                    line = [word];
                     tspan = text.append('tspan').attr('x', x).attr('y', y).attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word);
                 }
             }
@@ -457,8 +436,8 @@ function RadarChart(id, data, options) {
         const legendOrdinal = d3.legendColor()
             // d3 symbol creates a path-string, for example
             // "M0,-8.059274488676564L9.306048591020996,8.059274488676564 -9.306048591020996,8.059274488676564Z"
-            .shape('path', d3.symbol().type(d3.symbolTriangle).size(150)())
-            .shapePadding(10)
+            .shape('path', d3.symbol().type(d3.symbolCircle).size(35)())
+            .shapePadding(0)
             .scale(cfg.color.domain(categories))
             .title(cfg.legendTitle)
             .labels(
@@ -511,15 +490,37 @@ function RadarChart(id, data, options) {
         });
     }
 
-    function getAllAxis(data) {
+    function getFixData() {
         return data
-            .flat()
-            .map(el => el.axis)
-            .filter((v, i, a) => a.indexOf(v) === i);
-        // .sort()
+            .map(el => _.groupBy(el, 'category'))
+            .reduce((acc, list) => {
+                const key = Object.keys(list)[0];
+                acc[key] = list[key];
+                return acc;
+            }, {});
+    }
+
+    function getAllAxis(data) {
+        const fixData = getFixData();
+
+        return _.chain(categories)
+            .reduce((acc, category) => {
+                acc = [
+                    ...acc,
+                    ...fixData[category].map(el => el.axis)
+                ];
+                return acc;
+            }, [])
+            .uniq()
+
+            .value();
     }
 
     function getPosition(d) {
+        return allAxis.indexOf(d.axis);
+
+        let startPosition = 0;
+
         const found = data.reduce((acc, dataValues, index) => {
             const el = dataValues[0];
 
@@ -533,7 +534,7 @@ function RadarChart(id, data, options) {
             return acc;
         }, undefined);
 
-        const startAfterOtherCirle = data.reduce((acc, values, index) => {
+        startPosition = data.reduce((acc, values, index) => {
             if (index < found.index) {
                 acc += values.length;
             }
@@ -541,7 +542,12 @@ function RadarChart(id, data, options) {
             return acc;
         }, 0);
 
-        return found.dataValues.map(el => el.axis).indexOf(d.axis) + startAfterOtherCirle;
+        const position = found.dataValues.map(el => el.axis).indexOf(d.axis) + startPosition;
+
+        // const position = allAxis.indexOf(d.axis, startPosition);
+        console.log('[getPosition] d', d, 'startPosition', startPosition, 'position', position);
+
+        return position;
     }
 
 }
