@@ -51,9 +51,23 @@ class QlikRadarService {
                 ])
                 .groupBy('category')
                 .reduce((acc, current, key) => {
+                    console.log('[current], current', current);
+
+                    const othersCategory = _.find(current, {
+                        axis: 'Others'
+                    });
+
+                    let allCategories = current;
+
+                    if (othersCategory) {
+                        console.log('[othersCategory] key', key, 'othersCategory', othersCategory);
+                        allCategories = _.without(current, othersCategory);
+                        allCategories.push(othersCategory);
+                    }
+
                     acc.push({
                         key,
-                        values: current
+                        values: allCategories
                     });
 
                     categories.push(key);
