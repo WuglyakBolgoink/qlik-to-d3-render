@@ -91,8 +91,6 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
         }
 
         console.log('[RadarChart] chartDefaultOptions', chartDefaultOptions);
-        console.log('[RadarChart] chartDefaultOptions.color.range()', chartDefaultOptions.color.range());
-        console.log('[RadarChart] chartDefaultOptions.color.domain()', chartDefaultOptions.color.domain());
 
         let p;
         let v;
@@ -138,9 +136,6 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
         const radius = Math.abs(Math.min(v / 2 - chartDefaultOptions.margin.left - chartDefaultOptions.margin.right, p / 2 - chartDefaultOptions.margin.top - chartDefaultOptions.margin.bottom));
         const angleSlice = 2 * Math.PI / total;
         const rScale = d3.scaleLinear().range([0, radius]).domain([minChartValue, maxChartValue]);
-
-        console.log('[RadarChart] radius', radius);
-        console.log('[RadarChart] angleSlice', angleSlice);
 
         let w = function (t) {
             return Number.isFinite(t)
@@ -347,7 +342,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             }))
             .style('fill', 'none')
             .style('pointer-events', 'all')
-            .on('mouseover', (function (t) {
+            .on('mouseover', (function (event, t) {
                 if (!__component.inEditState) {
                     let e = parseFloat(d3.select(this).attr('cx')) - 10;
                     let r = parseFloat(d3.select(this).attr('cy')) - 10;
@@ -379,8 +374,6 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                 .attr('class', 'legendOrdinal')
                 .attr('transform', 'translate(' + chartDefaultOptions.legendPosition.x + ',' + chartDefaultOptions.legendPosition.y + ')');
 
-            console.log('[RadarChart.RadarChart] chartDefaultOptions.color.domain()', chartDefaultOptions.color.domain());
-
             const T = d3
                 .legendColor()
                 .shape(
@@ -393,14 +386,14 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                 .shapePadding(10)
                 .scale(chartDefaultOptions.color)
                 .labels(chartDefaultOptions.color.domain().map((function (t) {
-                    console.log('[definitions] t', t);
+                    // console.log('[definitions] t', t);
 
                     try {
-                        console.log('[definitions] definitions', definitions[t][0]);
+                        // console.log('[definitions] definitions', definitions[t][0]);
                         return definitions[t][0].radar_area;
 
                     } catch (e) {
-                        console.error('[]', e);
+                        console.error('[definitions]', e);
                         return 'error';
                     }
                 })))
@@ -441,24 +434,36 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             r = t.match(/[^\d\-\+#]/g),
             i = r && r[r.length - 1] || '.',
             o = r && r[1] && r[0] || ',';
+
         t = t.split(i), n = +(n = n.toFixed(t[1] && t[1].length)) + '';
+
         let u = t[1] && t[1].lastIndexOf('0'),
             a = n.split('.');
+
         (!a[1] || a[1] && a[1].length <= u) && (n = (+n).toFixed(u + 1));
+
         let c = t[0].split(o);
+
         t[0] = c.join('');
+
         let l = t[0] && t[0].indexOf('0');
+
         if (l > -1) {
             for (; a[0].length < t[0].length - l;) {
                 a[0] = '0' + a[0];
             }
         } else {
-            0 == +a[0] && (a[0] = '');
+            0 === +a[0] && (a[0] = '');
         }
+
         (n = n.split('.'))[0] = a[0];
+
         let s = c[1] && c[c.length - 1].length;
+
+        let h = '';
+
         if (s) {
-            for (let f = n[0], h = '', p = f.length % s, v = 0, d = f.length; v < d; v++) {
+            for (let f = n[0], p = f.length % s, v = 0, d = f.length; v < d; v++) {
                 h += f.charAt(v), !((v - p + 1) % s) && v < d - s && (h += o);
             }
             n[0] = h;
