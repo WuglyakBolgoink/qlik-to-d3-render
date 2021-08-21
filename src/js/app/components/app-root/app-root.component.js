@@ -28,11 +28,15 @@ class AppRootController {
         this.chartOptions = {
             roundStrokes: false,
             levels: 6,
+
+            // todo: remove? use original values from qlick import
             legendDisplay: true,
+            // todo: remove? use original values from plugin
             legendPosition: {
                 x: 10,
                 y: 10
             },
+
             margin: margin,
             size: {
                 width: width,
@@ -758,13 +762,14 @@ angular
                 <textarea data-ng-model="$ctrl.json" rows="10" required></textarea>
                 <button type="submit" data-ng-disabled="$ctrl.form.$invalid">Import</button>
             </form>
-            <hr>
-            <qlik-radar-chart
-                ng-if="$ctrl.file" 
-                cmp-class="radarChart1" 
-                cmp-file="$ctrl.file"
-                cmp-options="$ctrl.chartOptions"
-            ></qlik-radar-chart>  
+            <div ng-if="$ctrl.file">
+                <br>
+                <qlik-radar-chart
+                    cmp-class="radarChart1" 
+                    cmp-file="$ctrl.file"
+                    cmp-options="$ctrl.chartOptions"
+                ></qlik-radar-chart>  
+            </div>
         `,
         controller: AppRootController
     });
