@@ -3,6 +3,7 @@
 /**
  * @class QlikRadarChartController
  *
+ * @property {string} cmpId - ID for container.
  * @property {string} cmpClass - CSS class name for SVG container.
  * @property {any} cmpFile - Original qlik file as JSON Object.
  * @property {any} cmpOptions - Custom chart options.
@@ -20,11 +21,12 @@ class QlikRadarChartController {
     }
 
     $onInit() {
-        console.log('[QlikRadarChartController.$onInit] this.cmpClass', this.cmpClass);
-        console.log('[QlikRadarChartController.$onInit] this.cmpOptions', this.cmpOptions);
-        console.log('[QlikRadarChartController.$onInit] this.cmpFile', this.cmpFile);
+        this.inEditState = false;
+        this.options = {
+            noInteraction: false
+        };
 
-        this.drawAll();
+        this.draw();
     }
 
     /**
@@ -32,19 +34,48 @@ class QlikRadarChartController {
      */
     $onChanges(changesObj) {
         if (changesObj && changesObj.cmpFile && changesObj.cmpFile.previousValue !== changesObj.cmpFile.currentValue) {
-            this.drawAll();
+            // this.draw();
         }
     }
 
-    drawAll() {
-        console.log('[drawAll] this.cmpClass', this.cmpClass);
-        console.log('[drawAll] this.cmpFile', this.cmpFile);
-        console.log('[drawAll] this.cmpOptions:', this.cmpOptions);
+    _drawAll() {
+        console.warn('[_drawAll] this.cmpClass', this.cmpClass);
+        console.warn('[_drawAll] this.cmpFile', this.cmpFile);
+        console.warn('[_drawAll] this.cmpOptions:', JSON.stringify(this.cmpOptions, null, 2));
 
         this.$timeout(() => {
             const chart = this.QlikRadarRenderService.getRadarChart();
-            chart(`.${ this.cmpClass }`, this.cmpFile, this.cmpOptions);
+            chart(`.${ this.cmpClass }`, this.cmpFile, this.cmpOptions, this, this.cmpId);
         }, 0);
+    }
+
+    /**
+     * @param {boolean} single - Draw all categories or only single, by clicking on category item.
+     * @param {string?} categoryId - Category Id if "single === true".
+     * @param {Object?} options - todo...
+     *
+     * @public
+     */
+    draw(single = false, categoryId = '', options = null) {
+        console.log('[QlikRadarChartController.draw] options', JSON.stringify(options, null, 2));
+        if (single) {
+            console.log('[QlikRadarChartController.draw] single', categoryId);
+            this.inEditState = true;
+            this.$scope.$apply();
+        } else {
+            console.log('[QlikRadarChartController.draw] all');
+            this._drawAll();
+        }
+    }
+
+    selectValues(a, b, c) {
+        console.warn('TODO -> [QlikRadarChartController.selectValues]', a, b, c);
+
+        this.draw(true, '', {
+            a,
+            b,
+            c
+        });
     }
 
 }
@@ -59,9 +90,12 @@ angular
     .module('qlik.ui.radar')
     .component('qlikRadarChart', {
         template: `
+            <pre> inEditState: {{ $ctrl.inEditState | json }} </pre> 
+            <div id="{{$ctrl.cmpId}}"></div>
             <div class="rc" data-ng-class="$ctrl.cmpClass"></div>
         `,
         bindings: {
+            cmpId: '@',
             cmpClass: '@',
             cmpFile: '<',
             cmpOptions: '<'

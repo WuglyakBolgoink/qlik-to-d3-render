@@ -765,6 +765,7 @@ angular
             <div ng-if="$ctrl.file">
                 <br>
                 <qlik-radar-chart
+                    cmp-id="421f8686-1676-47ff-ac56-8b498bbe3598" 
                     cmp-class="radarChart1" 
                     cmp-file="$ctrl.file"
                     cmp-options="$ctrl.chartOptions"

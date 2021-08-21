@@ -40,54 +40,22 @@ function paintChart(__cssClass, chartDefaultOptions, _htmlEl, _qLayout, dimensio
 
 }
 
-function RadarChart(__cssClass, __originalFile, __options, __data) {
-    console.clear();
-
-    // TODO: откуда?
-    const __c = {
-        _inEditState: false,
-        options: {
-            noInteraction: false
-        },
-        backendApi: {
-            selectValues: (a, b, c) => {
-                console.warn('TODO -> [c.backendApi.selectValues]', a, b, c);
-            }
-        }
-    };
-
+function RadarChart(__cssClass, __originalFile, __options, __component, __componentId) {
     const chartOptions = _init(__options);
     console.log('[RadarChart] chartOptions', chartOptions);
 
     const qLayoutObj = _.cloneDeep(__originalFile.result.qLayout);
+    console.log('[RadarChart] qLayoutObj', qLayoutObj);
 
     const dimensions = _getO(_.cloneDeep(qLayoutObj));
     console.log('[RadarChart] dimensions', dimensions);
 
-    const chartColorSchema = qLayoutObj.ColorSchema;
-
-    const margin = {
-        top: 0,
-        right: 10,
-        bottom: 40,
-        left: 10
-    };
-
-    const width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right;
-    const height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
-
     if (dimensions) {
         const chartDefaultOptions = {
-            size: __options.size || {
-                width: width,
-                height: height
-            },
-            margin: __options.margin || margin,
-            legendPosition: __options.legendPosition || {
-                x: 10,
-                y: 10
-            },
-            color: d3.scaleOrdinal().range(chartColorSchema),
+            size: chartOptions.size,
+            margin: chartOptions.margin,
+            legendPosition: chartOptions.legendPosition,
+            color: d3.scaleOrdinal().range(qLayoutObj.ColorSchema),
             colorOpacity: {
                 circle: .1,
                 area: .2,
@@ -95,16 +63,16 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
                 area_over: .6,
                 area_click: .8
             },
-            roundStrokes: __options.roundStrokes || false,
+            roundStrokes: chartOptions.roundStrokes || false,
             maxValue: .6,
             levels: 6,
             dotRadius: 4,
             labelFactor: 1.02,
             wrapWidth: 50,
             strokeWidth: 2.8,
-            legendDisplay: __options.legendDisplay || true,
+            legendDisplay: chartOptions.legendDisplay || true,
             numberFormat: (t) => {
-                console.error('[numberFormat] t', t);
+                console.error('todo remove -> [chartDefaultOptions.numberFormat] t', t);
             }
         };
 
@@ -115,14 +83,15 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
         console.log('[RadarChart] definitions', definitions);
 
         if (__options) {
-            for (let h in __options) {
-                if (__options[h]) {
-                    chartDefaultOptions[h] = __options[h];
+            for (let optionKey in __options) {
+                if (__options[optionKey]) {
+                    chartDefaultOptions[optionKey] = __options[optionKey];
                 }
             }
         }
 
         console.log('[RadarChart] chartDefaultOptions', chartDefaultOptions);
+        console.log('[RadarChart] chartDefaultOptions.color.range()', chartDefaultOptions.color.range());
         console.log('[RadarChart] chartDefaultOptions.color.domain()', chartDefaultOptions.color.domain());
 
         let p;
@@ -148,8 +117,8 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
             ? (p = chartDefaultOptions.size.width, v = chartDefaultOptions.size.width)
             : (p = chartDefaultOptions.size.height, v = chartDefaultOptions.size.height);
 
-        console.log('[RadarChart] maxChartValue', maxChartValue);
-        console.log('[RadarChart] minChartValue', minChartValue);
+        console.warn('[RadarChart] maxChartValue', maxChartValue);
+        console.warn('[RadarChart] minChartValue', minChartValue);
         console.log('[RadarChart] size.width/height p', p);
         console.log('[RadarChart] size.width/height h', v);
 
@@ -170,6 +139,9 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
         const angleSlice = 2 * Math.PI / total;
         const rScale = d3.scaleLinear().range([0, radius]).domain([minChartValue, maxChartValue]);
 
+        console.log('[RadarChart] radius', radius);
+        console.log('[RadarChart] angleSlice', angleSlice);
+
         let w = function (t) {
             return Number.isFinite(t)
                 ? rScale(t)
@@ -180,11 +152,14 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
 
         let chartContainerId = 'container_' + qLayoutObj.qInfo.qId;
 
-        // todo...
-        // e.empty().append($('<div />').attr('id', chartContainerId).width(chartDefaultOptions.size.width).height(chartDefaultOptions.size.height));
+        console.log('[RadarChart.RadarChart] chartContainerId', chartContainerId);
 
-        // let S = d3.select('#'.concat(chartContainerId)).append('svg').attr('width', chartDefaultOptions.size.width).attr('height', chartDefaultOptions.size.height).classed('in-edit-mode', __c._inEditState), // todo...
-        let S = d3.select(__cssClass)
+        $('#' + __componentId).empty().css({
+            'border': '1px solid red',
+            'text-align': 'center'
+        }).append($('<div />').attr('id', chartContainerId).width(chartDefaultOptions.size.width).height(chartDefaultOptions.size.height));
+
+        let S = d3.select('#'.concat(chartContainerId))
             .append('svg')
             .attr('width', chartDefaultOptions.size.width)
             .attr('height', chartDefaultOptions.size.height);
@@ -308,7 +283,7 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
                     true === t.dim1IsNull && (n = true);
                 }));
 
-                n || true === __c.options.noInteraction || __c.backendApi.selectValues(0, [t[0].radar_area_id], true);
+                n || true === __component.options.noInteraction || __component.selectValues(0, [t[0].radar_area_id], true);
             }))
             .on('mouseout', (function () {
                 $('#' + chartContainerId).css('cursor', 'default');
@@ -347,7 +322,7 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
                 return w(t.value) * Math.sin(angleSlice * n - Math.PI / 2);
             }))
             .style('fill', (function (t, n, e) {
-                return chartDefaultOptions.color(e);
+                return chartDefaultOptions.color(n);
             })).style('fill-opacity', .8);
 
         N
@@ -373,7 +348,7 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
             .style('fill', 'none')
             .style('pointer-events', 'all')
             .on('mouseover', (function (t) {
-                if (!__c._inEditState) {
+                if (!__component.inEditState) {
                     let e = parseFloat(d3.select(this).attr('cx')) - 10;
                     let r = parseFloat(d3.select(this).attr('cy')) - 10;
 
@@ -386,7 +361,7 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
                         .style('opacity', 1);
                 }
             })).on('mouseout', (function () {
-            __c._inEditState || tooltip.transition().duration(200).style('opacity', 0);
+            __component.inEditState || tooltip.transition().duration(200).style('opacity', 0);
         }));
 
         const tooltip = N
@@ -404,10 +379,17 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
                 .attr('class', 'legendOrdinal')
                 .attr('transform', 'translate(' + chartDefaultOptions.legendPosition.x + ',' + chartDefaultOptions.legendPosition.y + ')');
 
+            console.log('[RadarChart.RadarChart] chartDefaultOptions.color.domain()', chartDefaultOptions.color.domain());
+
             const T = d3
                 .legendColor()
-                .shape('path', d3.symbol().type(d3.symbolCircle)
-                    .size(40)())
+                .shape(
+                    'path',
+                    d3
+                        .symbol()
+                        .type(d3.symbolCircle)
+                        .size(40)()
+                )
                 .shapePadding(10)
                 .scale(chartDefaultOptions.color)
                 .labels(chartDefaultOptions.color.domain().map((function (t) {
@@ -433,7 +415,7 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
                         let n = false;
                         definitions[t].find((function (t) {
                             true === t.dim1IsNull && (n = true);
-                        })), n || true === __c.options.noInteraction || (d3.selectAll('#'.concat(chartContainerId, ' .radarArea')).transition().duration(200).style('fill-opacity', .9), __c.backendApi.selectValues(0, [definitions[t][0].radar_area_id], true));
+                        })), n || true === __component.options.noInteraction || (d3.selectAll('#'.concat(chartContainerId, ' .radarArea')).transition().duration(200).style('fill-opacity', .9), __component.selectValues(0, [definitions[t][0].radar_area_id], true));
                     }(t);
                 }))
                 .on('cellout', (function () {
@@ -450,7 +432,8 @@ function RadarChart(__cssClass, __originalFile, __options, __data) {
         if (!t || isNaN(+n)) {
             return n;
         }
-        let e = (n = '-' == t.charAt(0)
+
+        let e = (n = '-' === t.charAt(0)
                 ? -n
                 : +n) < 0
                 ? n = -n
@@ -518,6 +501,7 @@ function _init(_chartOptions) {
             }
         }
     };
+
     const d = {
         type: 'items',
         items: {
