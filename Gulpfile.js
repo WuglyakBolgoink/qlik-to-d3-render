@@ -10,7 +10,7 @@ const $iife = require('gulp-iife');
 const browserSync = require('browser-sync');
 const log = require('fancy-log');
 const del = require('del');
-const { reload } = browserSync;
+const {reload} = browserSync;
 
 function clean() {
     return del([
@@ -33,7 +33,17 @@ function js() {
 }
 
 function jsVendors() {
-    return src('./src/libs/**/*.js')
+    return src([
+        'node_modules/angular/angular.min.js',
+        'node_modules/d3/dist/d3.min.js',
+        'node_modules/d3-format/dist/d3-format.min.js',
+        'node_modules/d3-interpolate/dist/d3-interpolate.min.js',
+        'node_modules/d3-scale/dist/d3-scale.min.js',
+        'node_modules/d3-shape/dist/d3-shape.min.js',
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/lodash/lodash.min.js',
+        './src/libs/d3-legend.js' // patched version for fixing legend with latest version of d3!
+    ])
         .pipe($concat('vendors.js'))
         .pipe(dest('dest/js/'));
 }
