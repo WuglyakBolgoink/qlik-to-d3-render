@@ -91,8 +91,6 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
         }
 
         console.log('[RadarChart] chartDefaultOptions', chartDefaultOptions);
-        console.log('[RadarChart] chartDefaultOptions.color.range()', chartDefaultOptions.color.range());
-        console.log('[RadarChart] chartDefaultOptions.color.domain()', chartDefaultOptions.color.domain());
 
         let p;
         let v;
@@ -138,9 +136,6 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
         const radius = Math.abs(Math.min(v / 2 - chartDefaultOptions.margin.left - chartDefaultOptions.margin.right, p / 2 - chartDefaultOptions.margin.top - chartDefaultOptions.margin.bottom));
         const angleSlice = 2 * Math.PI / total;
         const rScale = d3.scaleLinear().range([0, radius]).domain([minChartValue, maxChartValue]);
-
-        console.log('[RadarChart] radius', radius);
-        console.log('[RadarChart] angleSlice', angleSlice);
 
         let w = function (t) {
             return Number.isFinite(t)
@@ -347,7 +342,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             }))
             .style('fill', 'none')
             .style('pointer-events', 'all')
-            .on('mouseover', (function (t) {
+            .on('mouseover', (function (event, t) {
                 if (!__component.inEditState) {
                     let e = parseFloat(d3.select(this).attr('cx')) - 10;
                     let r = parseFloat(d3.select(this).attr('cy')) - 10;
@@ -372,17 +367,12 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
         if (N.selectAll('.axisLabel').data(d3.range(1, chartDefaultOptions.levels + 1).reverse()).enter().append('text').attr('class', 'axisLabel').attr('x', 4).attr('y', (function (t) {
             return -t * radius / chartDefaultOptions.levels;
         })).attr('dy', '0.4em').style('font-size', '12px').attr('fill', '#000000').text((function (t) {
-            const text = P(chartOptions.numberFormat[0], (minChartValue + (maxChartValue - minChartValue) * t / chartDefaultOptions.levels) * chartOptions.numberFormat[1]) + chartOptions.numberFormat[2];
-            console.log('[.] text', text);
-            return text;
-            // return P(chartOptions.numberFormat[0], (minChartValue + (maxChartValue - minChartValue) * t / chartDefaultOptions.levels) * chartOptions.numberFormat[1]) + chartOptions.numberFormat[2];
+            return P(chartOptions.numberFormat[0], (minChartValue + (maxChartValue - minChartValue) * t / chartDefaultOptions.levels) * chartOptions.numberFormat[1]) + chartOptions.numberFormat[2];
         })), !(chartDefaultOptions.size.width / chartDefaultOptions.size.height < 1.5 && chartDefaultOptions.size.height < 380)) {
             S
                 .append('g')
                 .attr('class', 'legendOrdinal')
                 .attr('transform', 'translate(' + chartDefaultOptions.legendPosition.x + ',' + chartDefaultOptions.legendPosition.y + ')');
-
-            console.log('[RadarChart.RadarChart] chartDefaultOptions.color.domain()', chartDefaultOptions.color.domain());
 
             const T = d3
                 .legendColor()
@@ -396,14 +386,14 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                 .shapePadding(10)
                 .scale(chartDefaultOptions.color)
                 .labels(chartDefaultOptions.color.domain().map((function (t) {
-                    console.log('[definitions] t', t);
+                    // console.log('[definitions] t', t);
 
                     try {
-                        console.log('[definitions] definitions', definitions[t][0]);
+                        // console.log('[definitions] definitions', definitions[t][0]);
                         return definitions[t][0].radar_area;
 
                     } catch (e) {
-                        console.error('[]', e);
+                        console.error('[definitions]', e);
                         return 'error';
                     }
                 })))
@@ -432,8 +422,6 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
     }
 
     function P(t, n) {
-        console.log('[P.P] t', t, 'n', n);
-
         if (!t || isNaN(+n)) {
             return n;
         }
@@ -446,11 +434,6 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             r = t.match(/[^\d\-\+#]/g),
             i = r && r[r.length - 1] || '.',
             o = r && r[1] && r[0] || ',';
-
-        console.log('[P.P] e', e);
-        console.log('[P.P] r', r);
-        console.log('[P.P] i', JSON.stringify(i, null, 2));
-        console.log('[P.P] o', JSON.stringify(o, null, 2));
 
         t = t.split(i), n = +(n = n.toFixed(t[1] && t[1].length)) + '';
 
@@ -480,7 +463,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
         let h = '';
 
         if (s) {
-            for (let f = n[0],  p = f.length % s, v = 0, d = f.length; v < d; v++) {
+            for (let f = n[0], p = f.length % s, v = 0, d = f.length; v < d; v++) {
                 h += f.charAt(v), !((v - p + 1) % s) && v < d - s && (h += o);
             }
             n[0] = h;
