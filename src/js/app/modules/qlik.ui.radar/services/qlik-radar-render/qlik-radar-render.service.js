@@ -372,7 +372,10 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
         if (N.selectAll('.axisLabel').data(d3.range(1, chartDefaultOptions.levels + 1).reverse()).enter().append('text').attr('class', 'axisLabel').attr('x', 4).attr('y', (function (t) {
             return -t * radius / chartDefaultOptions.levels;
         })).attr('dy', '0.4em').style('font-size', '12px').attr('fill', '#000000').text((function (t) {
-            return P(chartOptions.numberFormat[0], (minChartValue + (maxChartValue - minChartValue) * t / chartDefaultOptions.levels) * chartOptions.numberFormat[1]) + chartOptions.numberFormat[2];
+            const text = P(chartOptions.numberFormat[0], (minChartValue + (maxChartValue - minChartValue) * t / chartDefaultOptions.levels) * chartOptions.numberFormat[1]) + chartOptions.numberFormat[2];
+            console.log('[.] text', text);
+            return text;
+            // return P(chartOptions.numberFormat[0], (minChartValue + (maxChartValue - minChartValue) * t / chartDefaultOptions.levels) * chartOptions.numberFormat[1]) + chartOptions.numberFormat[2];
         })), !(chartDefaultOptions.size.width / chartDefaultOptions.size.height < 1.5 && chartDefaultOptions.size.height < 380)) {
             S
                 .append('g')
@@ -429,6 +432,8 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
     }
 
     function P(t, n) {
+        console.log('[P.P] t', t, 'n', n);
+
         if (!t || isNaN(+n)) {
             return n;
         }
@@ -441,24 +446,41 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             r = t.match(/[^\d\-\+#]/g),
             i = r && r[r.length - 1] || '.',
             o = r && r[1] && r[0] || ',';
+
+        console.log('[P.P] e', e);
+        console.log('[P.P] r', r);
+        console.log('[P.P] i', JSON.stringify(i, null, 2));
+        console.log('[P.P] o', JSON.stringify(o, null, 2));
+
         t = t.split(i), n = +(n = n.toFixed(t[1] && t[1].length)) + '';
+
         let u = t[1] && t[1].lastIndexOf('0'),
             a = n.split('.');
+
         (!a[1] || a[1] && a[1].length <= u) && (n = (+n).toFixed(u + 1));
+
         let c = t[0].split(o);
+
         t[0] = c.join('');
+
         let l = t[0] && t[0].indexOf('0');
+
         if (l > -1) {
             for (; a[0].length < t[0].length - l;) {
                 a[0] = '0' + a[0];
             }
         } else {
-            0 == +a[0] && (a[0] = '');
+            0 === +a[0] && (a[0] = '');
         }
+
         (n = n.split('.'))[0] = a[0];
+
         let s = c[1] && c[c.length - 1].length;
+
+        let h = '';
+
         if (s) {
-            for (let f = n[0], h = '', p = f.length % s, v = 0, d = f.length; v < d; v++) {
+            for (let f = n[0],  p = f.length % s, v = 0, d = f.length; v < d; v++) {
                 h += f.charAt(v), !((v - p + 1) % s) && v < d - s && (h += o);
             }
             n[0] = h;
