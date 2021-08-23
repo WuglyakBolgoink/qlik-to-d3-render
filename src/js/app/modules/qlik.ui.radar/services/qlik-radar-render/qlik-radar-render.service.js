@@ -386,10 +386,10 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                 .shapePadding(10)
                 .scale(chartDefaultOptions.color)
                 .labels(chartDefaultOptions.color.domain().map((function (t) {
-                    // console.log('[definitions] t', t);
+                    console.log('[definitions] t', t);
 
                     try {
-                        // console.log('[definitions] definitions', definitions[t][0]);
+                        console.log('[definitions] definitions', definitions[t][0]);
                         return definitions[t][0].radar_area;
 
                     } catch (e) {

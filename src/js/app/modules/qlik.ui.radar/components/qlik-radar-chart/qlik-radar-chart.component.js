@@ -38,14 +38,14 @@ class QlikRadarChartController {
         }
     }
 
-    _drawAll() {
+    _drawAll(file) {
         console.warn('[_drawAll] this.cmpClass', this.cmpClass);
         console.warn('[_drawAll] this.cmpFile', this.cmpFile);
         console.warn('[_drawAll] this.cmpOptions:', JSON.stringify(this.cmpOptions, null, 2));
 
         this.$timeout(() => {
             const chart = this.QlikRadarRenderService.getRadarChart();
-            chart(`.${ this.cmpClass }`, this.cmpFile, this.cmpOptions, this, this.cmpId);
+            chart(`.${ this.cmpClass }`, file || this.cmpFile, this.cmpOptions, this, this.cmpId);
         }, 0);
     }
 
@@ -60,8 +60,30 @@ class QlikRadarChartController {
         console.log('[QlikRadarChartController.draw] options', JSON.stringify(options, null, 2));
         if (single) {
             console.log('[QlikRadarChartController.draw] single', categoryId);
-            this.inEditState = true;
-            this.$scope.$apply();
+
+            if (!this.inEditState) {
+                this.inEditState = true;
+
+                const filteredFile = _.cloneDeep(this.cmpFile);
+
+                let qMatrixEl = filteredFile.result.qLayout.qHyperCube.qDataPages[0].qMatrix;
+
+                qMatrixEl = qMatrixEl.filter((chunks) => {
+                    return chunks[0].qElemNumber === categoryId;
+                });
+
+                filteredFile.result.qLayout.qHyperCube.qDataPages[0].qMatrix = qMatrixEl;
+
+                this._drawAll(filteredFile);
+
+                this.$scope.$apply();
+            } else {
+                this.inEditState = false;
+
+                this._drawAll();
+
+                this.$scope.$apply();
+            }
         } else {
             console.log('[QlikRadarChartController.draw] all');
             this._drawAll();
@@ -71,7 +93,17 @@ class QlikRadarChartController {
     selectValues(a, b, c) {
         console.warn('TODO -> [QlikRadarChartController.selectValues]', a, b, c);
 
-        this.draw(true, '', {
+        const [categoryId] = b;
+
+        // {
+        //     "a": 0,
+        //     "b": [
+        //          913
+        //      ],
+        //     "c": true
+        // }
+
+        this.draw(true, categoryId, {
             a,
             b,
             c
