@@ -34,15 +34,15 @@ class QlikRadarChartController {
      */
     $onChanges(changesObj) {
         if (changesObj && changesObj.cmpFile && changesObj.cmpFile.previousValue !== changesObj.cmpFile.currentValue) {
-            // this.draw();
+            this.draw();
         }
     }
 
     _drawAll(file) {
-        console.warn('[_drawAll] this.cmpClass', this.cmpClass);
-        console.warn('[_drawAll] file', file);
-        console.warn('[_drawAll] this.cmpFile', this.cmpFile);
-        console.warn('[_drawAll] this.cmpOptions:', JSON.stringify(this.cmpOptions, null, 2));
+        // console.warn('[_drawAll] this.cmpClass', this.cmpClass);
+        // console.warn('[_drawAll] file', file);
+        // console.warn('[_drawAll] this.cmpFile', this.cmpFile);
+        // console.warn('[_drawAll] this.cmpOptions:', JSON.stringify(this.cmpOptions, null, 2));
 
         this.$timeout(() => {
             const chart = this.QlikRadarRenderService.getRadarChart();
@@ -58,9 +58,10 @@ class QlikRadarChartController {
      * @public
      */
     draw(single = false, categoryId = '', options = null) {
-        console.log('[QlikRadarChartController.draw] options', JSON.stringify(options, null, 2));
+        // console.log('[QlikRadarChartController.draw] options', JSON.stringify(options, null, 2));
+
         if (single) {
-            console.log('[QlikRadarChartController.draw] single', categoryId);
+            // console.log('[QlikRadarChartController.draw] single', categoryId);
 
             if (!this.inEditState) {
                 this.inEditState = true;
@@ -73,7 +74,7 @@ class QlikRadarChartController {
                     return chunks[0].qElemNumber === categoryId;
                 });
 
-                console.log('[QlikRadarChartController.draw] qMatrixEl', qMatrixEl);
+                // console.log('[QlikRadarChartController.draw] qMatrixEl', qMatrixEl);
 
                 filteredFile.result.qLayout.qHyperCube.qDataPages[0].qMatrix = qMatrixEl;
 
@@ -88,23 +89,15 @@ class QlikRadarChartController {
                 this.$scope.$apply();
             }
         } else {
-            console.log('[QlikRadarChartController.draw] all');
+            // console.log('[QlikRadarChartController.draw] all');
             this._drawAll();
         }
     }
 
     selectValues(a, b, c) {
-        console.warn('TODO -> [QlikRadarChartController.selectValues]', a, b, c);
+        // console.warn('[QlikRadarChartController.selectValues]', a, b, c);
 
         const [categoryId] = b;
-
-        // {
-        //     "a": 0,
-        //     "b": [
-        //          913
-        //      ],
-        //     "c": true
-        // }
 
         this.draw(true, categoryId, {
             a,
@@ -125,9 +118,7 @@ angular
     .module('qlik.ui.radar')
     .component('qlikRadarChart', {
         template: `
-            <pre> inEditState: {{ $ctrl.inEditState | json }} </pre> 
             <div id="{{$ctrl.cmpId}}"></div>
-            <div class="rc" data-ng-class="$ctrl.cmpClass"></div>
         `,
         bindings: {
             cmpId: '@',

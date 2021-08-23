@@ -42,13 +42,13 @@ function paintChart(__cssClass, chartDefaultOptions, _htmlEl, _qLayout, dimensio
 
 function RadarChart(__cssClass, __originalFile, __options, __component, __componentId) {
     const chartOptions = _init(__options);
-    console.log('[RadarChart] chartOptions', chartOptions);
+    // console.log('[RadarChart] chartOptions', chartOptions);
 
     const qLayoutObj = _.cloneDeep(__originalFile.result.qLayout);
-    console.log('[RadarChart] qLayoutObj', qLayoutObj);
+    // console.log('[RadarChart] qLayoutObj', qLayoutObj);
 
     const dimensions = _getO(_.cloneDeep(qLayoutObj));
-    console.log('[RadarChart] dimensions', dimensions);
+    // console.log('[RadarChart] dimensions', dimensions);
 
     if (dimensions) {
         const chartDefaultOptions = {
@@ -80,7 +80,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             return t.definition;
         });
 
-        console.log('[RadarChart] definitions', definitions);
+        // console.log('[RadarChart] definitions', definitions);
 
         if (__options) {
             for (let optionKey in __options) {
@@ -90,7 +90,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             }
         }
 
-        console.log('[RadarChart] chartDefaultOptions', chartDefaultOptions);
+        // console.log('[RadarChart] chartDefaultOptions', chartDefaultOptions);
 
         let p;
         let v;
@@ -115,10 +115,10 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             ? (p = chartDefaultOptions.size.width, v = chartDefaultOptions.size.width)
             : (p = chartDefaultOptions.size.height, v = chartDefaultOptions.size.height);
 
-        console.warn('[RadarChart] maxChartValue', maxChartValue);
-        console.warn('[RadarChart] minChartValue', minChartValue);
-        console.log('[RadarChart] size.width/height p', p);
-        console.log('[RadarChart] size.width/height h', v);
+        // console.warn('[RadarChart] maxChartValue', maxChartValue);
+        // console.warn('[RadarChart] minChartValue', minChartValue);
+        // console.log('[RadarChart] size.width/height p', p);
+        // console.log('[RadarChart] size.width/height h', v);
 
         let allAxis = definitions[0].map((function (t) {
             return t.axis;
@@ -128,10 +128,10 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
             allAxis = allAxis.slice(0, 100);
         }
 
-        console.log('[RadarChart] allAxis', allAxis);
+        // console.log('[RadarChart] allAxis', allAxis);
 
         const total = allAxis.length;
-        console.log('[RadarChart] allAxis total', total);
+        // console.log('[RadarChart] allAxis total', total);
 
         const radius = Math.abs(Math.min(v / 2 - chartDefaultOptions.margin.left - chartDefaultOptions.margin.right, p / 2 - chartDefaultOptions.margin.top - chartDefaultOptions.margin.bottom));
         const angleSlice = 2 * Math.PI / total;
@@ -147,7 +147,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
 
         let chartContainerId = 'container_' + qLayoutObj.qInfo.qId;
 
-        console.log('[RadarChart.RadarChart] chartContainerId', chartContainerId);
+        // console.log('[RadarChart.RadarChart] chartContainerId', chartContainerId);
 
         $('#' + __componentId).empty().css({
             'border': '1px solid red',
@@ -375,7 +375,6 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                 .attr('class', 'legendOrdinal')
                 .attr('transform', 'translate(' + chartDefaultOptions.legendPosition.x + ',' + chartDefaultOptions.legendPosition.y + ')');
 
-            console.log('[RadarChart.RadarChart] chartDefaultOptions.color.domain()', chartDefaultOptions.color.domain());
             const T = d3
                 .legendColor()
                 .shape(
