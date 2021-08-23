@@ -271,7 +271,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                     .duration(200)
                     .style('fill-opacity', chartDefaultOptions.colorOpacity.area_over);
             }))
-            .on('click', (function (t) {
+            .on('click', (function (event, t) {
                 let n = false;
 
                 t.find((function (t) {
@@ -317,7 +317,8 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                 return w(t.value) * Math.sin(angleSlice * n - Math.PI / 2);
             }))
             .style('fill', (function (t, n, e) {
-                return chartDefaultOptions.color(n);
+                const position = _.findIndex(dimensions, function(dim) { return dim.dim === t.radar_area; });
+                return chartDefaultOptions.color(position);
             })).style('fill-opacity', .8);
 
         N
@@ -374,6 +375,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                 .attr('class', 'legendOrdinal')
                 .attr('transform', 'translate(' + chartDefaultOptions.legendPosition.x + ',' + chartDefaultOptions.legendPosition.y + ')');
 
+            console.log('[RadarChart.RadarChart] chartDefaultOptions.color.domain()', chartDefaultOptions.color.domain());
             const T = d3
                 .legendColor()
                 .shape(
@@ -386,10 +388,7 @@ function RadarChart(__cssClass, __originalFile, __options, __component, __compon
                 .shapePadding(10)
                 .scale(chartDefaultOptions.color)
                 .labels(chartDefaultOptions.color.domain().map((function (t) {
-                    console.log('[definitions] t', t);
-
                     try {
-                        console.log('[definitions] definitions', definitions[t][0]);
                         return definitions[t][0].radar_area;
 
                     } catch (e) {

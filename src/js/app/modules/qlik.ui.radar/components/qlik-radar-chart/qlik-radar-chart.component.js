@@ -40,6 +40,7 @@ class QlikRadarChartController {
 
     _drawAll(file) {
         console.warn('[_drawAll] this.cmpClass', this.cmpClass);
+        console.warn('[_drawAll] file', file);
         console.warn('[_drawAll] this.cmpFile', this.cmpFile);
         console.warn('[_drawAll] this.cmpOptions:', JSON.stringify(this.cmpOptions, null, 2));
 
@@ -71,6 +72,8 @@ class QlikRadarChartController {
                 qMatrixEl = qMatrixEl.filter((chunks) => {
                     return chunks[0].qElemNumber === categoryId;
                 });
+
+                console.log('[QlikRadarChartController.draw] qMatrixEl', qMatrixEl);
 
                 filteredFile.result.qLayout.qHyperCube.qDataPages[0].qMatrix = qMatrixEl;
 
